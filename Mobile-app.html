@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - DeepTrics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo"><h1>DeepTrics</h1></div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </div>
+  </header>
+
+  <section class="section visible">
+    <div class="container">
+      <h3 id="sub">About Mobile App Development</h3>
+      <p>Mobile app development refers to the process of creating software applications that run on mobile devices like smartphones and tablets. These apps can offer a wide range of functionality, from productivity tools and entertainment to social networking and e-commerce.</p>
+
+      <h5>📱 What is Mobile App Development?</h5>
+      <p>It involves designing, coding, testing, and deploying applications for mobile platforms such as Android and iOS. Mobile apps can be native, hybrid, or web-based, and they often integrate with backend systems or cloud services.</p>
+
+      <h5>📲 Types of Mobile Applications</h5>
+      <ul id="points">
+        <li><strong>Native Apps:</strong> Built specifically for a platform (Android or iOS) using platform-specific languages like Kotlin or Swift.</li>
+        <li><strong>Hybrid Apps:</strong> Built using web technologies (HTML, CSS, JavaScript) and wrapped in a native shell (e.g., Ionic, Cordova).</li>
+        <li><strong>Cross-Platform Apps:</strong> Created with tools like Flutter or React Native that compile to native code for multiple platforms.</li>
+        <li><strong>Progressive Web Apps (PWA):</strong> Web apps that behave like native apps when installed on a device.</li>
+      </ul>
+
+      <h5>🧰 Tools & Technologies</h5>
+      <ul id="points">
+        <li><strong>Languages:</strong> Kotlin, Java, Swift, Dart, JavaScript</li>
+        <li><strong>Frameworks:</strong> Flutter, React Native, SwiftUI, Xamarin, Ionic</li>
+        <li><strong>IDEs:</strong> Android Studio, Xcode, Visual Studio Code</li>
+        <li><strong>Databases:</strong> Firebase, SQLite, Realm, Core Data</li>
+        <li><strong>APIs:</strong> REST, GraphQL, third-party SDKs</li>
+        <li><strong>Testing:</strong> Appium, Espresso, XCTest</li>
+      </ul>
+
+      <h5>⭐ Key Features of a Successful Mobile App</h5>
+      <ul id="points">
+        <li>Responsive and smooth UI/UX</li>
+        <li>Fast performance and loading time</li>
+        <li>Secure authentication and data protection</li>
+        <li>Offline functionality</li>
+        <li>Push notifications and real-time updates</li>
+        <li>Scalable backend integration</li>
+      </ul>
+
+      <h5>👩‍💼 Career Opportunities</h5>
+      <ul id="points">
+        <li>Android Developer</li>
+        <li>iOS Developer</li>
+        <li>Cross-Platform Developer</li>
+        <li>Mobile UI/UX Designer</li>
+        <li>Mobile App Tester</li>
+        <li>Mobile DevOps Engineer</li>
+      </ul>
+
+      <h5>🚀 Trends in Mobile App Development</h5>
+      <ul id="points">
+        <li>5G-enabled apps</li>
+        <li>AI and Machine Learning integration</li>
+        <li>Augmented Reality (AR) & Virtual Reality (VR)</li>
+        <li>Wearable and IoT integration</li>
+        <li>Blockchain-based apps</li>
+        <li>Mobile Commerce (mCommerce)</li>
+        <li>Low-code/no-code app builders</li>
+      </ul>
+
+      <h5>🌍 Why Mobile App Development Matters</h5>
+      <ul id="points">
+        <li>Empowers businesses to engage users directly</li>
+        <li>Drives innovation in healthcare, finance, education, and more</li>
+        <li>Enables on-the-go accessibility and productivity</li>
+        <li>Supports billions of devices globally</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-logo">
+                <h1 style="color: var(--accent-color);">DeepTrics</h1>
+                <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>About Us</h4>
+                <a href="about.html">Company</a>
+                <a href="careers.html">Careers</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Connect</h4>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://x.com/DeepTrics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/deeptrics_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

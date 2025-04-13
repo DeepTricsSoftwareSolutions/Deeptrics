@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - DeepTrics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo"><h1>DeepTrics</h1></div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </div>
+  </header>
+
+  <section  class="section visible">
+    <div class="container">
+      <h3 class="sub">About AI Solutions</h3>
+      <p>Artificial Intelligence (AI) solutions are transforming the way businesses operate, enabling machines to mimic human intelligence to automate tasks, analyze data, and deliver predictive insights.</p>
+
+      <h5 class="sub">🤖 What is AI?</h5>
+      <p>AI refers to the simulation of human intelligence in machines that are programmed to think, learn, and solve problems. It includes techniques such as machine learning, deep learning, natural language processing (NLP), and computer vision.</p>
+
+      <h5  class="sub">🛠️ Types of AI Solutions</h5>
+      <ul id="points">
+        <li><strong>Machine Learning (ML)</strong> – Enables systems to learn from data and improve over time without being explicitly programmed.</li>
+        <li><strong>Natural Language Processing (NLP)</strong> – Allows machines to understand, interpret, and respond to human language.</li>
+        <li><strong>Computer Vision</strong> – Empowers machines to interpret and understand visual information from the world.</li>
+        <li><strong>Robotic Process Automation (RPA)</strong> – Automates repetitive tasks typically done by humans.</li>
+        <li><strong>Predictive Analytics</strong> – Uses historical data to make predictions about future outcomes.</li>
+      </ul>
+
+      <h5 class="sub">🧰 Common Tools & Technologies</h5>
+      <ul id="points">
+        <li><strong>Languages:</strong> Python, R, Java, C++</li>
+        <li><strong>Frameworks:</strong> TensorFlow, PyTorch, Scikit-learn, Keras</li>
+        <li><strong>Platforms:</strong> Google AI, IBM Watson, Microsoft Azure AI, AWS AI Services</li>
+        <li><strong>Libraries:</strong> OpenCV, SpaCy, NLTK, Hugging Face Transformers</li>
+        <li><strong>Tools:</strong> Jupyter Notebook, Google Colab, Apache Spark</li>
+      </ul>
+
+      <h5 class="sub">🚀 Why AI Matters</h5>
+      <ul id="points">
+        <li>Increases <strong>efficiency</strong> and reduces operational costs</li>
+        <li>Enhances <strong>decision-making</strong> with real-time data insights</li>
+        <li>Delivers <strong>personalized user experiences</strong></li>
+        <li>Improves <strong>accuracy</strong> in data processing and predictions</li>
+        <li>Supports <strong>scalable automation</strong> across industries</li>
+      </ul>
+
+      <h5 class="sub">🔍 Applications of AI</h5>
+      <ul id="points">
+        <li>Chatbots & Virtual Assistants</li>
+        <li>Fraud Detection in Finance</li>
+        <li>AI-powered Healthcare Diagnosis</li>
+        <li>Recommendation Engines (e.g., Netflix, Amazon)</li>
+        <li>Autonomous Vehicles</li>
+        <li>Smart Manufacturing and Industry 4.0</li>
+        <li>Customer Sentiment Analysis</li>
+      </ul>
+
+      <h5 class="sub">🧠 AI in the Real World</h5>
+      <p>From automating customer service to enabling real-time language translation and powering self-driving cars, AI solutions are at the forefront of technological innovation, helping companies gain competitive advantages in the digital age.</p>
+
+      <h5 class="sub">🌟 The Future of AI</h5>
+      <ul id="points">
+        <li>Explainable AI for transparency in decisions</li>
+        <li>AI Ethics & Bias Mitigation</li>
+        <li>Human-AI collaboration in creative industries</li>
+        <li>Edge AI for low-latency processing on devices</li>
+        <li>AI in Sustainability and Climate Modeling</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-logo">
+                <h1 style="color: var(--accent-color);">DeepTrics</h1>
+                <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>About Us</h4>
+                <a href="about.html">Company</a>
+                <a href="careers.html">Careers</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h4>Connect</h4>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://x.com/DeepTrics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/deeptrics_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

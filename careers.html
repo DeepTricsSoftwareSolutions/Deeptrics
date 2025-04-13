@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers - Deeptrics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><h1>DeepTrics</h1></div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html" class="active">Careers</a></li>
+                </ul>
+                <div class="burger" onclick="toggleMenu()">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="careers" class="section visible">
+        <div class="container">
+            <h3>Join Our Team</h3>
+            <p>At DeepTrics, we are always looking for passionate and talented individuals to join our growing team.</p>
+            <div class="job-listings">
+                <div class="job">
+                    <h4>Frontend Developer Intern</h4>
+                    <p>Location: Remote | Type: Internship</p>
+                    <p>Skills: React, JavaScript, HTML, CSS</p>
+                    <a href="apply.html" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="job">
+                    <h4>Backend Developer Intern</h4>
+                    <p>Location: Remote | Type: Internship</p>
+                    <p>Skills: Node.js, Django, Python</p>
+                    <a href="apply.html" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="job">
+                    <h4>AI/ML Engineer Internship</h4>
+                    <p>Location: Remote | Type: Internship</p>
+                    <p>Skills: TensorFlow, SK-Learn, PyTorch, Python</p>
+                    <a href="apply.html" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h1 style="color: var(--accent-color);">DeepTrics</h1>
+                    <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+                </div>
+
+                <div class="footer-links-column">
+                    <h4>About Us</h4>
+                    <a href="about.html">Company</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+
+                <div class="footer-links-column">
+                    <h4>Connect</h4>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://x.com/DeepTrics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/deeptrics_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
