@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Developer Intern - DeepTrics</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><h1>DeepTrics</h1></div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html" class="active">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="job-details" class="section">
+        <div class="container">
+            <h3>AI/ML Developer Intern</h3>
+            <p><strong>Location:</strong> Remote</p>
+            <p><strong>Type:</strong> Internship</p>
+            <p><strong>Skills Required:</strong> Python, TensorFlow, PyTorch, Machine Learning, Deep Learning</p>
+
+            <h4>About the Role</h4>
+            <p>
+                As an AI/ML Developer Intern at DeepTrics, you will work on designing and developing intelligent machine learning models for our projects. You will collaborate with our data science team to ensure seamless integration and deliver high-quality solutions.
+            </p>
+
+            <h4>Perks and Benefits</h4>
+            <ul id="points">
+                <li>Hands-on experience with real-world AI/ML projects.</li>
+                <li>Mentorship from experienced AI/ML professionals.</li>
+                <li>Flexible working hours.</li>
+                <li>Opportunity to work in a collaborative and innovative environment.</li>
+            </ul>
+
+            <h4>Certifications</h4>
+            <p>
+                Upon successful completion of the internship, you will receive a certificate of completion from DeepTrics, which will add value to your resume and help you stand out in the job market.
+            </p>
+
+            <h4>Why Choose Us?</h4>
+            <p>
+                This internship is completely free of cost. We believe in providing opportunities to passionate individuals without any financial barriers. Join us to kickstart your career in AI/ML development!
+            </p>
+
+            <a href="" class="apply-btn disabled">Apply Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h1 style="color: var(--accent-color);">DeepTrics</h1>
+                    <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+                </div>
+    
+                <div class="footer-links-column">
+                    <h4>About Us</h4>
+                    <a href="about.html">Company</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+    
+                <div class="footer-links-column">
+                    <h4>Connect</h4>
+                    <a href="contact.html">Contact</a>
+                </div>
+    
+                <div class="footer-social">
+                    <a href="https://x.com/DeepTrics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/deeptrics_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+    
+            <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+        const sections = document.querySelectorAll('.section');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+</html>
