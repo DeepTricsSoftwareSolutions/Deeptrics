@@ -505,3 +505,86 @@
   text-align: center;
   padding: 5rem 1rem;
 }
+/* Internship Opportunities */
+    .job-openings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+ .job-opening {
+    position: relative;
+    background: black;
+    padding: 1.5rem;
+    border-radius: 12px;
+    height: 250px;
+    flex: 1 1 300px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+} 
+
+.job-opening h4 {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-size: 1.3rem;
+}
+
+.job-opening p {
+    color: var(--muted-text);
+    margin-bottom: 1rem;
+}
+
+.job-opening:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(77, 184, 255, 0.2);
+} 
+.job h4 i {
+  color: var(--accent-color, #ff5e57);
+  margin-right: 10px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+
+  50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+  }
+} 
+ /* Apply Now Button Styling */
+ .apply-now-button {
+  background: #028cdc;
+  /* Your accent color */
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-now-button:hover {
+  background-color: var(--accent-color-light, #045721);
+  /* Lighter accent color on hover */
+  transform: translateY(-3px);
+  /* Slightly lift the button on hover */
+}
+
+.apply-now-button:focus {
+  outline: none;
+  /* Remove default focus outline */
+}
+.button-container {
+  text-align: center;
+  margin-top: 2rem; /* Optional: spacing from elements above */
+}
