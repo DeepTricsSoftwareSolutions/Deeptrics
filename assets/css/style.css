@@ -498,3 +498,10 @@
       transform: translateY(0);
     }
   }
+ /*new addition*/
+.career-hero {
+  background: linear-gradient(to right, #36617b, #0f548d);
+  color: rgb(255, 254, 254);
+  text-align: center;
+  padding: 5rem 1rem;
+}
