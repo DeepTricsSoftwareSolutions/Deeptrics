@@ -24,7 +24,29 @@
         </nav>
     </div>
 </header>
-
+<div class="page__banner">
+  <div class="page__banner-shape">
+    <img src="assets/images/background/page-banner-shape.png" alt="image">
+  </div>
+  <div class="bs-container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-xl-6 col-lg-7">
+        <div class="page__banner-content">
+          <h2>Contact Us</h2>
+          <span><a href="index.html">Home</a>
+            <span>|</span>
+            Contact Us
+          </span>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="page__banner-img">
+          <img src="assets/images/background/page-banner-img.png" alt="image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <section id="contact" class="section contact visible">
     <div class="container">
       <h3>Contact Us</h3>
@@ -69,6 +91,7 @@
         <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
     </div>
 </footer>
+<div class="hidden" id="spinner" style="height: 100vh;position:fixed;top: 4rem;left: 0;right: 0;"><span class="loader"></span></div>
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
@@ -78,8 +101,11 @@
     let status = document.getElementById('statusMessage');
 
     form.addEventListener('submit', function(e) {
-      e.preventDefault(); // stop default form submission
-
+      e.preventDefault();
+      let spinner = document.getElementById('spinner');
+      spinner.classList.remove('hidden');
+      spinner.classList.add('show');
+      document.body.style.overflow='hidden';
       const formData = new FormData(form);
       const data = new URLSearchParams(formData);
       console.log(data);
@@ -93,10 +119,16 @@
         status.innerText = "Form submitted successfully!";
         status.classList.add('success-message');
         form.reset(); 
+        spinner.classList.remove('show');
+        spinner.classList.add('hidden');
+        document.body.style.overflow='auto';
       })
       .catch(error => {
         status.innerText = "Something went wrong. Please try again.";
         status.classList.add('error-message');
+        spinner.classList.remove('show');
+        spinner.classList.add('hidden');
+        document.body.style.overflow='auto';
       });
     });
 

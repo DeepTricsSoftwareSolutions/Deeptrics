@@ -143,6 +143,48 @@
         <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
     </div>
 </footer>
+<div class="hidden" id="spinner" style="height: 100vh;position:fixed;top: 4rem;left: 0;right: 0;"><span class="loader"></span></div>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+    const form = document.getElementById('myForm');
+    let status = document.getElementById('statusMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let spinner = document.getElementById('spinner');
+      spinner.classList.remove('hidden');
+      spinner.classList.add('show');
+      document.body.style.overflow='hidden';
+      const formData = new FormData(form);
+      const data = new URLSearchParams(formData);
+      console.log(data);
+
+      fetch('https://script.google.com/macros/s/AKfycbxiaIfW_Jbk4JnonBnwY-vlWBIfwLpK1sDSOxpIghtB1IKFOfKL7zmpg0cb1HgLvFfH/exec', {
+        method: 'POST',
+        body: data
+      })
+      .then(response => response.text())
+      .then(result => {
+        status.innerText = "Form submitted successfully!";
+        status.classList.add('success-message');
+        form.reset(); 
+        spinner.classList.remove('show');
+        spinner.classList.add('hidden');
+        document.body.style.overflow='auto';
+      })
+      .catch(error => {
+        status.innerText = "Something went wrong. Please try again.";
+        status.classList.add('error-message');
+        spinner.classList.remove('show');
+        spinner.classList.add('hidden');
+        document.body.style.overflow='auto';
+      });
+    });
+
+  </script>
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
@@ -163,32 +205,7 @@
 
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
-    const form = document.getElementById('myForm');
-    let status = document.querySelector('#statusMessage');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault(); // stop default form submission
-
-      const formData = new FormData(form);
-      const data = new URLSearchParams(formData);
-      console.log(data);
-
-      fetch('https://script.google.com/macros/s/AKfycbxiaIfW_Jbk4JnonBnwY-vlWBIfwLpK1sDSOxpIghtB1IKFOfKL7zmpg0cb1HgLvFfH/exec', {
-        method: 'POST',
-        body: data
-      })
-      .then(response => response.text())
-      .then(result => {
-        console.log(result);
-        status.innerText = "Form submitted successfully!";
-        status.classList.add('success-message');
-        form.reset(); // clear the form
-      })
-      .catch(error => {
-        status.innerText = "Something went wrong. Please try again.";
-        status.classList.add('error-message');
-      });
-    });
+    
   </script>
   
 </body>
