@@ -112,7 +112,8 @@
 
       fetch('https://script.google.com/macros/s/AKfycbxy3oas3971ejJL5jJUqt6R3GvyHMNFBQUvkhe-D9jLlaok1SFWhM-2d8cEeVgDG9k/exec', {
         method: 'POST',
-        body: data
+        body: data,
+        mode:'no-cors'
       })
       .then(response => response.text())
       .then(result => {
