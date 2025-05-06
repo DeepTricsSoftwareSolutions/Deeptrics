@@ -162,9 +162,10 @@
       const data = new URLSearchParams(formData);
       console.log(data);
 
-      fetch('https://script.google.com/macros/s/AKfycbxiaIfW_Jbk4JnonBnwY-vlWBIfwLpK1sDSOxpIghtB1IKFOfKL7zmpg0cb1HgLvFfH/exec', {
+      fetch('https://script.google.com/macros/s/AKfycby_HinKrRtEfFuNfXT5ERS44hRFREuC3M-TsuBPq9cSdVsW3zxaIsK8J0ey4dMNBhjVLQ/exec', {
         method: 'POST',
-        body: data
+        body: data,
+        mode:'no-cors'
       })
       .then(response => response.text())
       .then(result => {
