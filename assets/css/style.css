@@ -276,24 +276,7 @@
   #motto {
     color: rgb(241, 241, 241);
   }
- #about{
-  background:url('../../assets/images/background/about-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
- }
- #about::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.815); /* or use a gradient */
-  z-index: 0;
-}
-#about > * {
-  position: relative;
-  z-index: 1;
-}
+
   .cards {
     display: flex;
     flex-wrap: wrap;
