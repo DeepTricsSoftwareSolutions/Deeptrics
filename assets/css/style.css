@@ -37,6 +37,25 @@
     max-width: 1200px;
     margin: auto;
   }
+  .container span{
+    font-size: 20px;
+    color: var(--accent-color);
+    display: inline-block;
+    font-weight: 500;
+  }
+  #points span{
+    display: block;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 7px;
+  }
+  .aligncenter{
+    width: 700px;
+  }
+  .point{
+    display: flex;
+    justify-content: center;
+  }
   h4 {
     margin-top: 1.5rem;
     font-size: 1.2rem;
@@ -253,6 +272,9 @@
     margin: 0 auto 2rem auto;
     text-align: center;
     color: var(--muted-text);
+  }
+  #motto {
+    color: rgb(241, 241, 241);
   }
  #about{
   background:url('../../assets/images/background/about-bg.jpg');

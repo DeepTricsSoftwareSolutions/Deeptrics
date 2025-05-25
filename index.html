@@ -51,24 +51,31 @@
   <section id="about" class="section">
     <div class="container">
       <h3 id="sub">About DeepTrics</h3>
-      <p>At DeepTrics, we turn bold ideas into powerful digital solutions. </p>
+      <p>At <span>DeepTrics</span>, we're more than just a team—we're a movement of passionate developers, educators, and innovators on a mission to transform student learning! Our student-first platform is designed to ignite <span>real-world</span> skills through <span>100% free</span>, <span>hands-on</span> internships that go beyond the classroom. By bridging the gap between theory and industry, we empower students to build confidence, sharpen their talents, and step boldly into the future.</p>
 
-        <p>We are a forward-thinking tech company specializing in web applications and mobile app development, dedicated to building seamless, scalable, and intuitive digital experiences. Whether you're a startup looking to launch your first app or an established business aiming to transform your digital presence, DeepTrics is your trusted partner in innovation.</p>
+      <h4>Our Motto</h4>
+<p id="motto">Empowering Students, One Real-World Project at a Time.</p><p>
+
+We believe learning is most impactful when paired with <span>hands-on application</span>. That’s why our programs focus on meaningful experiences that prepare students for the real world.</p>
 
         
-        <p>Our team blends creativity, technical expertise, and strategic insight to craft custom solutions tailored to your goals. From UI/UX design and front-end development to robust back-end systems and cross-platform mobile apps, we deliver performance-driven products that make an impact.</p>
+        <h4>What We Offer</h4>
+          <ul id="points">
+<li class="point">
+  <div class="aligncenter"><span>Free Internships</span>
+Opportunities in Web Development, App Development, and UI/UX Design that mirror real industry workflows—complete with teamwork, deadlines, and version control.</div></li>
+
+<li class="point"><div class="aligncenter"><span>Real-World Projects</span>
+Interns work on live projects for startups, NGOs, or internal tools—gaining tangible outcomes for their portfolios and understanding real business environments.</div></li>
+
+<li class="point"><div class="aligncenter"><span>Mentorship & Collaboration</span>
+Guidance from experienced mentors, peer collaboration, and exposure to Agile practices and Git version control.</div></li>
+
+<li class="point"><div class="aligncenter"><span>Certificates & Recognition</span>
+Verified internship certificates, personal feedback, and a platform to showcase projects to potential employers.</div></li>
+          </ul>
         
-        <h4>What sets us apart?</h4>
-        <ul id="points">
-        <li class="point">💡 User-focused design that drives engagement</li>
         
-        <li class="point">⚙️ Cutting-edge technologies and clean code</li>
-        
-        <li class="point">🚀 Agile development for faster time-to-market</li>
-        
-        <li class="point">🤝 Client collaboration at every stage</li>
-        </ul><p>
-        With a passion for problem-solving and a commitment to excellence, DeepTrics helps businesses thrive in the digital age. Let's build something great—together.</p>
       
     </div>
   </section>
@@ -289,6 +296,31 @@
     window.addEventListener('load', revealOnScroll);
     
   </script>
-  
+  <script>
+  const quote = document.querySelector('#motto');
+  const fullText = quote.textContent;
+  let i = 0;
+
+  function typeWriter() {
+    if (i < fullText.length) {
+      quote.textContent += fullText.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    } else {
+      // After finishing typing, wait 3 seconds then restart
+      setTimeout(() => {
+        quote.textContent = "";
+        i = 0;
+        typeWriter();
+      }, 3000);
+    }
+  }
+
+  window.onload = () => {
+    quote.textContent = ""; // Clear initial text
+    typeWriter();
+  };
+</script>
+
 </body>
 </html>
