@@ -10,16 +10,21 @@
 <body>
   <header>
     <div class="container">
-        <div class="logo" style="display: flex;align-items: center;"><img src="assets/images/logo/DeepTrics.png" alt="" style="height: 40px;"></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
+          </a>
+        </div>
         <nav>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="internships.html">Internships</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
                 <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         </nav>
     </div>
   </header>
@@ -89,7 +94,8 @@
         <div class="footer-grid">
             <div class="footer-logo">
                 <h1 style="color: var(--accent-color);">DeepTrics</h1>
-                <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+                <p class="footer-tagline">Learn. Build. Evolve.</p>
+                <p class="footer-tagline-support">A global platform for real-world internships, fellowships, and product development.</p>
             </div>
 
             <div class="footer-links-column">
@@ -111,15 +117,10 @@
               </div>
         </div>
 
-        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
     </div>
 </footer>
 
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

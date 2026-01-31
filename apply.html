@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Apply for DeepTrics free internships and fellowship programs. Open to students worldwide. No fees.">
+  <title>Apply - Internships & Fellowships | DeepTrics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="apply-page">
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
+        </a>
+      </div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="college-partnership.html">Colleges & Universities</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section apply-main">
+    <div class="container">
+      <div class="apply-header">
+        <h1>Apply for Internship or Fellowship</h1>
+        <p class="apply-header-sub">One form. Worldwide. No fees.</p>
+      </div>
+
+      <div class="apply-intro" role="region" aria-labelledby="intro-heading">
+        <h2 id="intro-heading" class="apply-intro-title">Before you start</h2>
+        <p>This application is open to students worldwide.</p>
+        <p>DeepTrics offers free, real-world internships and fellowship programs. There are no fees. We value curiosity, responsibility, and willingness to learn more than prior experience.</p>
+      </div>
+
+      <form id="globalApplicationForm" class="apply-form" action="#" method="post" novalidate>
+
+        <!-- 1. BASIC INFORMATION -->
+        <fieldset class="form-section">
+          <legend><span class="legend-num">1</span> Basic Information</legend>
+
+          <div class="name-row form-row">
+            <div class="form-group">
+              <label for="firstName">First Name <span class="required">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="Given name" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="middleName">Middle Name <span class="optional">(optional)</span></label>
+              <input type="text" id="middleName" name="middleName" placeholder="Middle name if any" autocomplete="additional-name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name <span class="required">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Family name / Surname" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country of Residence <span class="required">*</span></label>
+            <select id="country" name="country" required aria-describedby="country-helper">
+              <option value="">Select country</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BE">Belgium</option>
+              <option value="BR">Brazil</option>
+              <option value="BG">Bulgaria</option>
+              <option value="CA">Canada</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CO">Colombia</option>
+              <option value="HR">Croatia</option>
+              <option value="EG">Egypt</option>
+              <option value="EE">Estonia</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GR">Greece</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HU">Hungary</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JP">Japan</option>
+              <option value="JO">Jordan</option>
+              <option value="KE">Kenya</option>
+              <option value="KW">Kuwait</option>
+              <option value="MY">Malaysia</option>
+              <option value="MX">Mexico</option>
+              <option value="MA">Morocco</option>
+              <option value="NL">Netherlands</option>
+              <option value="NZ">New Zealand</option>
+              <option value="NG">Nigeria</option>
+              <option value="NO">Norway</option>
+              <option value="PK">Pakistan</option>
+              <option value="PE">Peru</option>
+              <option value="PH">Philippines</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="QA">Qatar</option>
+              <option value="RO">Romania</option>
+              <option value="RU">Russia</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="SG">Singapore</option>
+              <option value="ZA">South Africa</option>
+              <option value="KR">South Korea</option>
+              <option value="ES">Spain</option>
+              <option value="LK">Sri Lanka</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="TW">Taiwan</option>
+              <option value="TZ">Tanzania</option>
+              <option value="TH">Thailand</option>
+              <option value="TR">Turkey</option>
+              <option value="UG">Uganda</option>
+              <option value="UA">Ukraine</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="VN">Vietnam</option>
+              <option value="OTHER">Other</option>
+            </select>
+            <span id="country-helper" class="helper-text">Where you currently live</span>
+          </div>
+
+          <div class="form-group">
+            <label for="timezone">Time Zone <span class="required">*</span></label>
+            <select id="timezone" name="timezone" required aria-describedby="timezone-helper">
+              <option value="">Select time zone</option>
+              <option value="UTC-12">UTC-12</option>
+              <option value="UTC-11">UTC-11</option>
+              <option value="UTC-10">UTC-10 (e.g. Hawaii)</option>
+              <option value="UTC-9">UTC-9 (e.g. Alaska)</option>
+              <option value="UTC-8">UTC-8 (e.g. Pacific US)</option>
+              <option value="UTC-7">UTC-7 (e.g. Mountain US)</option>
+              <option value="UTC-6">UTC-6 (e.g. Central US)</option>
+              <option value="UTC-5">UTC-5 (e.g. Eastern US)</option>
+              <option value="UTC-4">UTC-4 (e.g. Atlantic)</option>
+              <option value="UTC-3">UTC-3 (e.g. Brazil)</option>
+              <option value="UTC-2">UTC-2</option>
+              <option value="UTC-1">UTC-1</option>
+              <option value="UTC+0">UTC+0 (e.g. UK)</option>
+              <option value="UTC+1">UTC+1 (e.g. Central Europe)</option>
+              <option value="UTC+2">UTC+2 (e.g. Eastern Europe)</option>
+              <option value="UTC+3">UTC+3 (e.g. Moscow)</option>
+              <option value="UTC+4">UTC+4 (e.g. UAE)</option>
+              <option value="UTC+5">UTC+5 (e.g. Pakistan)</option>
+              <option value="UTC+5:30">UTC+5:30 (India)</option>
+              <option value="UTC+6">UTC+6 (e.g. Bangladesh)</option>
+              <option value="UTC+7">UTC+7 (e.g. Thailand)</option>
+              <option value="UTC+8">UTC+8 (e.g. Singapore, China)</option>
+              <option value="UTC+9">UTC+9 (e.g. Japan)</option>
+              <option value="UTC+10">UTC+10 (e.g. Australia East)</option>
+              <option value="UTC+11">UTC+11</option>
+              <option value="UTC+12">UTC+12</option>
+              <option value="OTHER_TZ">Other</option>
+            </select>
+            <span id="timezone-helper" class="helper-text">Used for scheduling; you can change later if needed</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. +1 234 567 8900" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="institution">College / University / Institution <span class="required">*</span></label>
+            <input type="text" id="institution" name="institution" placeholder="Name of your institution" required>
+          </div>
+
+          <div class="form-group">
+            <label for="degree">Degree / Program <span class="required">*</span></label>
+            <input type="text" id="degree" name="degree" placeholder="e.g. Computer Science, B.S. / B.Tech / M.S." required>
+          </div>
+
+          <div class="form-group">
+            <label for="currentStatus">Current Year or Status <span class="required">*</span></label>
+            <select id="currentStatus" name="currentStatus" required>
+              <option value="">Select</option>
+              <option value="Undergraduate">Undergraduate</option>
+              <option value="Graduate">Graduate</option>
+              <option value="Final Year">Final Year</option>
+              <option value="Recent Graduate">Recent Graduate</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- 2. PROGRAM & ROLE SELECTION -->
+        <fieldset class="form-section">
+          <legend><span class="legend-num">2</span> Program & Role Selection</legend>
+
+          <div class="form-group">
+            <label for="programType">Program Type <span class="required">*</span></label>
+            <select id="programType" name="programType" required>
+              <option value="">Select</option>
+              <option value="Internship">Internship</option>
+              <option value="Fellowship">Fellowship</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="preferredRole">Preferred Role / Area <span class="required">*</span></label>
+            <select id="preferredRole" name="preferredRole" required>
+              <option value="">Select</option>
+              <option value="Frontend">Frontend</option>
+              <option value="Full Stack">Full Stack</option>
+              <option value="Backend">Backend</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Data / Analytics">Data / Analytics</option>
+              <option value="DevOps / Cloud">DevOps / Cloud</option>
+              <option value="Mobile">Mobile</option>
+              <option value="Research / Exploration">Research / Exploration</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="whyInterested">Why are you interested in this program? <span class="required">*</span></label>
+            <textarea id="whyInterested" name="whyInterested" rows="4" placeholder="A few lines about your motivation and what draws you to this program." required></textarea>
+          </div>
+        </fieldset>
+
+        <!-- 3. EXPERIENCE & BACKGROUND (Optional) -->
+        <fieldset class="form-section">
+          <legend><span class="legend-num">3</span> Experience & Background <span class="optional">(optional)</span></legend>
+
+          <div class="form-group">
+            <label>Have you worked on any projects before?</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="hasProjects" value="Yes" id="hasProjectsYes">
+                <span>Yes</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="hasProjects" value="No" id="hasProjectsNo">
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="portfolioLink">GitHub / Portfolio / Project link <span class="optional">(optional)</span></label>
+            <input type="url" id="portfolioLink" name="portfolioLink" placeholder="https://github.com/yourprofile or portfolio URL">
+          </div>
+
+          <div class="form-group">
+            <label for="hopeToLearn">What do you hope to learn or gain from this program?</label>
+            <textarea id="hopeToLearn" name="hopeToLearn" rows="3" placeholder="Skills, experience, or goals you have in mind."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- 4. AVAILABILITY & COMMITMENT -->
+        <fieldset class="form-section">
+          <legend><span class="legend-num">4</span> Availability & Commitment</legend>
+
+          <div class="form-group">
+            <label for="weeklyHours">Weekly time availability <span class="required">*</span></label>
+            <select id="weeklyHours" name="weeklyHours" required>
+              <option value="">Select</option>
+              <option value="< 5 hours">&lt; 5 hours</option>
+              <option value="5–10 hours">5–10 hours</option>
+              <option value="10–20 hours">10–20 hours</option>
+              <option value="20+ hours">20+ hours</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="workingMode">Preferred working mode <span class="required">*</span></label>
+            <select id="workingMode" name="workingMode" required>
+              <option value="">Select</option>
+              <option value="Remote">Remote</option>
+              <option value="Hybrid">Hybrid (if applicable)</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Are you comfortable working with distributed teams across time zones? <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="comfortableTimezones" value="Yes" id="tzYes" required>
+                <span>Yes</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="comfortableTimezones" value="No" id="tzNo">
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- 5. EXPECTATION & ETHICS CHECK -->
+        <fieldset class="form-section">
+          <legend><span class="legend-num">5</span> Expectation & Ethics Check <span class="required">*</span></legend>
+          <p class="helper-text">All boxes must be checked. This helps us ensure a respectful and productive experience for everyone.</p>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="expectFreeRealWork" value="yes" required>
+              <span>I understand this is a <strong>free</strong> program with <strong>real work</strong>.</span>
+            </label>
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="expectNotCertificateOnly" value="yes" required>
+              <span>I am not applying only for a certificate.</span>
+            </label>
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="expectCollaborate" value="yes" required>
+              <span>I am willing to collaborate, communicate, and accept feedback.</span>
+            </label>
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="expectCommitTime" value="yes" required>
+              <span>I can commit time consistently during the program.</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- 6. FINAL NOTES -->
+        <div class="form-section form-notes" role="note">
+          <p>We review applications thoughtfully. If selected, you will receive next steps by email. Response times may vary based on program availability.</p>
+        </div>
+
+        <!-- 7. SUBMIT -->
+        <div class="form-submit-wrap">
+          <button type="submit" class="btn btn-primary">
+            Apply for Internship / Fellowship
+          </button>
+          <p class="submit-reassurance">No fees. Ever. For students worldwide.</p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <h1 style="color: var(--accent-color);">DeepTrics</h1>
+          <p class="footer-tagline">Learn. Build. Evolve.</p>
+          <p class="footer-tagline-support">A global platform for real-world internships, fellowships, and product development.</p>
+        </div>
+        <div class="footer-links-column">
+          <h4>About Us</h4>
+          <a href="about.html">Company</a>
+          <a href="careers.html">Careers</a>
+          <a href="internships.html">Internships</a>
+          <a href="college-partnership.html">Colleges & Universities</a>
+        </div>
+        <div class="footer-links-column">
+          <h4>Connect</h4>
+          <a href="contact.html">Contact</a>
+          <a href="services.html">Services</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://x.com/DeepTrics" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/deeptrics_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
