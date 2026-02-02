@@ -3,81 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services - Deeptrics</title>
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> -->
+  <meta name="description" content="DeepTrics software development services: web apps, mobile apps, and AI solutions. Our commercial work funds free student internships.">
+  <title>Services - DeepTrics | Web, Mobile & AI Development</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
     <div class="container">
-        <div class="logo" style="display: flex;align-items: center;"><img src="assets/images/logo/DeepTrics.png" alt="" style="height: 40px;"></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
+          </a>
+        </div>
         <nav>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="college-partnership.html">Colleges & Universities</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
                 <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="burger" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </div>
 </header>
 
-  
-  <section id="services" class="section visible">
+  <!-- Hero / Intro -->
+  <section id="services-hero" class="section home-section visible">
     <div class="container">
-      <h3>Our Expertise</h3>
-      <p>Explore the wide range of software development services we offer, tailored to meet your needs.</p>
+      <h3>Our Services</h3>
+      <p class="section-lead">We build software for products and clients. This work funds our free internship and fellowship programs—so when you work with us, you also support student learning.</p>
+    </div>
+  </section>
+
+  <!-- Service areas -->
+  <section id="services" class="section home-section home-section-alt">
+    <div class="container">
+      <h3>What We Build</h3>
+      <p class="section-lead">Web, mobile, and AI solutions tailored to your needs. We use modern stacks and focus on clean, maintainable delivery.</p>
       <div class="cards">
         <a href="web-development.html">
-        <div class="card" id="web-dev">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
-          <h4>Web Development</h4>
-          <p>Build fast, responsive, and modern websites and web apps that scale. Technologies: React, Django, Node.js.</p>
-        </div></a>
+          <div class="card" id="web-dev">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
+            <h4>Web Development</h4>
+            <p>Responsive websites and web applications with React, Django, Node.js. From front-end to full stack.</p>
+          </div>
+        </a>
         <a href="Mobile-app.html">
-        <div class="card" id="mobile-dev">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" title="React Native" />
-          <h4>Mobile Apps</h4>
-          <p>Native & cross-platform mobile apps built using Flutter, Kotlin, and React Native with seamless user experience.</p>
-        </div></a>
+          <div class="card" id="mobile-dev">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" title="React Native" />
+            <h4>Mobile Apps</h4>
+            <p>Native and cross-platform mobile apps with Flutter, Kotlin, and React Native.</p>
+          </div>
+        </a>
         <a href="AI-solutions.html">
-        <div class="card" id="ai-solutions">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" title="PyTorch" />
-          <h4>AI Solutions</h4>
-          <p>Leverage AI and ML to automate, predict, and optimize business workflows with intelligent systems.</p>
-        </div></a>
-  
+          <div class="card" id="ai-solutions">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" title="PyTorch" />
+            <h4>AI & ML Solutions</h4>
+            <p>AI and machine learning for automation, prediction, and smarter workflows. Python, TensorFlow, PyTorch.</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
-  
+
+  <!-- CTA -->
+  <section class="section home-section">
+    <div class="container">
+      <p class="section-lead">Interested in working with us? <a href="contact.html">Get in touch</a>. For free student internships, see <a href="internships.html">Internships</a> and <a href="apply.html">Apply</a>.</p>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
         <div class="footer-grid">
             <div class="footer-logo">
                 <h1 style="color: var(--accent-color);">DeepTrics</h1>
-                <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+                <p class="footer-tagline">Learn. Build. Evolve.</p>
+                <p class="footer-tagline-support">A global platform for real-world internships, fellowships, and product development.</p>
             </div>
 
             <div class="footer-links-column">
                 <h4>About Us</h4>
                 <a href="about.html">Company</a>
                 <a href="careers.html">Careers</a>
+                <a href="internships.html">Internships</a>
+                <a href="college-partnership.html">Colleges & Universities</a>
             </div>
 
             <div class="footer-links-column">
                 <h4>Connect</h4>
                 <a href="contact.html">Contact</a>
+                <a href="services.html">Services</a>
             </div>
 
             <div class="footer-social">
@@ -88,18 +116,12 @@
             </div>
         </div>
 
-        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
     </div>
 </footer>
   
   
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
-
-  </script>
+  <script src="assets/js/main.js"></script>
   
   
 </body>

@@ -3,212 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> -->
+  <meta name="description" content="DeepTrics - 100% free internships for students worldwide. Real projects, real experience. No fees. For students serious about building real-world skills.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>DeepTrics - Software Development Company</title>
+  <title>DeepTrics - Free Internships for Students | Real Projects, Real Experience</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
     <div class="container">
-        <div class="logo" style="display: flex;align-items: center;"><img src="assets/images/logo/DeepTrics.png" alt="" style="height: 40px;"></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
+          </a>
+        </div>
         <nav>
             <ul id="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="college-partnership.html">Colleges & Universities</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
                 <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="burger" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </div>
-</header>
-<!-- <div class="menu">
-    <button class="tab active">Home</button>
-    <button class="tab">About</button>
-    <button class="tab">Services</button>
-    <button class="tab">Contact</button>
-    <button class="tab">Careers
-    </button>
-  </div> -->
+  </header>
 
+  <!-- 1. HERO SECTION -->
   <section id="home" class="hero">
     <div id="background-slider">
       <img src="assets/images/background/img1.jpg" alt="Slide 1">
       <img src="assets/images/background/img2.jpg" alt="Slide 2">
       <img src="assets/images/background/img3.jpg" alt="Slide 3">
       <img src="assets/images/background/img4.jpg" alt="Slide 4">
+      <img src="assets/images/background/about-bg.jpg" alt="Slide 5">
     </div>
-    
-    <div class="container">
-      <h2>Empowering Ideas Through Code</h2>
-      <p>At DeepTrics, we merge creativity with cutting-edge technology to craft software that delivers seamless digital experiences.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h3 id="sub">About DeepTrics</h3>
-      <p>At <span>DeepTrics</span>, we're more than just a team—we're a movement of passionate developers, educators, and innovators on a mission to transform student learning! Our student-first platform is designed to ignite <span>real-world</span> skills through <span>100% free</span>, <span>hands-on</span> internships that go beyond the classroom. By bridging the gap between theory and industry, we empower students to build confidence, sharpen their talents, and step boldly into the future.</p>
-
-      <h4>Our Motto</h4>
-<p id="motto">Empowering Students, One Real-World Project at a Time.</p><p>
-
-We believe learning is most impactful when paired with <span>hands-on application</span>. That’s why our programs focus on meaningful experiences that prepare students for the real world.</p>
-
-        
-        <h4>What We Offer</h4>
-          <ul id="points">
-<li class="point">
-  <div class="aligncenter"><span>Free Internships</span>
-Opportunities in Web Development, App Development, and UI/UX Design that mirror real industry workflows—complete with teamwork, deadlines, and version control.</div></li>
-
-<li class="point"><div class="aligncenter"><span>Real-World Projects</span>
-Interns work on live projects for startups, NGOs, or internal tools—gaining tangible outcomes for their portfolios and understanding real business environments.</div></li>
-
-<li class="point"><div class="aligncenter"><span>Mentorship & Collaboration</span>
-Guidance from experienced mentors, peer collaboration, and exposure to Agile practices and Git version control.</div></li>
-
-<li class="point"><div class="aligncenter"><span>Certificates & Recognition</span>
-Verified internship certificates, personal feedback, and a platform to showcase projects to potential employers.</div></li>
-          </ul>
-        
-          <p>Our team blends creativity, technical expertise, and strategic insight to craft custom solutions tailored to your goals. From UI/UX design and front-end development to robust back-end systems and cross-platform mobile apps, we deliver performance-driven products that make an impact.</p>
-        
-        <h4>What sets us apart?</h4>
-        <ul id="points">
-        <li class="point">💡 User-focused design that drives engagement</li>
-        
-        <li class="point">⚙️ Cutting-edge technologies and clean code</li>
-           <li class="point">🚀 Agile development for faster time-to-market</li>
-
-        <li class="point">🤝 Client collaboration at every stage</li>
-        </ul><p>
-        With a passion for problem-solving and a commitment to excellence, DeepTrics helps businesses thrive in the digital age. Let's build something great—together.</p>
-    </div>
-  </section>
-
-  <section id="services" class="section">
-    <div class="container">
-      <h3>Our Expertise</h3>
-      <p>Explore the wide range of software development services we offer, tailored to meet your needs.</p>
-      <div class="cards">
-        <a href="web-development.html">
-        <div class="card" id="web-dev">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
-          <h4>Web Development</h4>
-          <p>Build fast, responsive, and modern websites and web apps that scale. Technologies: React, Django, Node.js.</p>
-        </div></a>
-        <a href="Mobile-app.html">
-        <div class="card" id="mobile-dev">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" title="React Native" />
-          <h4>Mobile Apps</h4>
-          <p>Native & cross-platform mobile apps built using Flutter, Kotlin, and React Native with seamless user experience.</p>
-        </div></a>
-        <a href="AI-solutions.html">
-        <div class="card" id="ai-solutions">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" title="PyTorch" />
-          <h4>AI Solutions</h4>
-          <p>Leverage AI and ML to automate, predict, and optimize business workflows with intelligent systems.</p>
-        </div></a>
-  
+    <div class="container hero-content-wrap">
+      <h2>You deserve real experience — not just a certificate.</h2>
+      <p>Free internships on real software projects. Work with teams, build your portfolio, and get interview-ready—no fees, no fake internships.</p>
+      <div class="hero-buttons">
+        <a href="apply.html" class="btn btn-primary">Apply for Free Internship</a>
+        <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
       </div>
     </div>
   </section>
-  <section id="careers" class="section">
-        <div class="container">
-            <h3>Join Our Team</h3>
-            <p>At DeepTrics, we are always looking for passionate and talented individuals to join our growing team.We
-                understand the importance of maintaining a healthy work-life balance. Enjoy flexible working hours,
-                remote options, and a supportive team environment that prioritizes your well-being.</p>
-            <h3>Our Core Values</h3>
-            <div class="job-listings">
-                <div class="job">
-                    <h4><i class="fa-solid fa-lightbulb"></i>Innovation</h4>
-                    <p>We never stop experimenting and learning.We embrace new ideas and technologies to drive
-                        transformation and create future-ready solutions.</p>
-                </div>
-                <div class="job">
-                    <h4><i class="fa-solid fa-people-group"></i>Teamwork</h4>
-                    <p>We grow together by lifting each other up.Collaboration is at the heart of everything we do — we
-                        thrive on diverse perspectives and shared success.</p>
-                </div>
-                <div class="job">
-                    <h4><i class="fa-solid fa-shield-heart"></i>Integrity</h4>
-                    <p>We stay true to our values and commitments.We uphold transparency and trust in every decision,
-                        ensuring we always do what’s right — not what’s easy.</p>
-                </div>
-            </div>
 
-            <h3 style="margin-top: 2rem;">Internship Opportunities</h3>
-            <div class="job-openings">
-                <div class="job-opening">
-                    <h4><i class="fa-solid fa-code"></i> Web Developer Intern</h4>
-                    <p>Work on exciting web-based projects using HTML, CSS, and JavaScript. You'll learn how to build
-                        responsive websites and improve front-end performance.</p>
-                </div>
-                <div class="job-opening">
-                    <h4><i class="fa-solid fa-layer-group"></i> Full Stack Developer Intern</h4>
-                    <p>Gain hands-on experience in both front-end and back-end development. Work with modern frameworks
-                        like React, Node.js, and databases like MongoDB or MySQL.</p>
-                </div>
-                <div class="job-opening">
-                    <h4><i class="fa-solid fa-palette"></i> UI/UX Intern</h4>
-                    <p>Collaborate with designers and developers to create stunning, user-friendly interfaces. Explore
-                        wireframing, prototyping, and user-centered design principles.</p>
-                </div>
-                <div class="job-opening">
-                    <h4><i class="fa-solid fa-network-wired"></i> DevOps Intern</h4>
-                    <p>Assist in automating deployments, monitoring systems, and maintaining CI/CD pipelines using tools
-                        like Docker, Jenkins, and AWS.</p>
-                </div>
-                <div class="job-opening">
-                    <h4><i class="fa-solid fa-server"></i> Backend Developer Intern</h4>
-                    <p>Learn to build scalable and secure APIs. Work with server-side technologies like Node.js,
-                        Express, or Java and understand database management.</p>
-                </div>
-                <div class="job-opening">
-                    <h4><i class="fa-brands fa-java"></i> Java Developer Intern</h4>
-                    <p>Enhance your Java skills by working on real-time backend logic, application development, and
-                        debugging within Java-based frameworks.</p>
-                </div>
-                <div class="job-opening">
-                    <h4><i class="fa-solid fa-chart-line"></i> Data Analyst Intern</h4>
-                    <p>Dive into data! Clean, analyze, and visualize datasets using tools like Excel, Python, SQL, or
-                        Tableau to generate meaningful business insights.</p>
-                </div>
-            </div>
-            <div>
-                <p>Click the "Apply now" button and fill form for the Internship. Opportunities </p>
-            </div>
-            <!-- Apply Now Button -->
-            <div class="button-container">
-                <a href="https://forms.gle/zh5HqkUVXtTZJWGbA" target="_blank">
-                    <button class="apply-now-button">Apply Now</button>
-                </a>
-            </div>
-        </div>
-    </section>
-  <section id="contact" class="section contact">
+  <!-- 2. PROBLEM STATEMENT -->
+  <section id="problem" class="section home-section visible">
     <div class="container">
-      <h3>Contact Us</h3>
-      <p>Let’s collaborate and build the future together. Reach out to us with your project idea.</p>
-      <form id="myForm">
-        <!-- status after submission -->
-        <div id="statusMessage"></div>
-        <input type="text" placeholder="Your Name" required name="Name"/>
-        <input type="email" placeholder="Your Email" required name="email"/>
-        <textarea placeholder="Your Message" required name="body"></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+      <h3>The Problem We See</h3>
+      <p>Students—especially in final year—often hit a wall: they need real-world experience to get a job, but many internships are paid, fake, or offer no real work. Part-time opportunities that fit around college are rare. Theory-heavy education leaves a gap between what you learn and what the industry needs.</p>
+      <p>We started DeepTrics because we believe you shouldn’t have to pay for experience, and you shouldn’t have to settle for work that doesn’t count.</p>
+    </div>
+  </section>
+
+  <!-- 3. MISSION & BELIEF -->
+  <section id="mission" class="section home-section home-section-alt">
+    <div class="container">
+      <h3>Why We Exist</h3>
+      <p><strong class="mission-emphasis">DeepTrics was not started for money.</strong> It was started to fix a real problem: giving students real opportunities instead of empty certificates.</p>
+      <p>We focus on real projects, real teams, and real learning. Our goal is to help you become someone who can walk into an interview with confidence—because you’ve already built things that matter.</p>
+    </div>
+  </section>
+
+  <!-- 4. HOW IT WORKS (3 steps) -->
+  <section id="how-it-works" class="section home-section">
+    <div class="container">
+      <h3>How It Works</h3>
+      <p class="section-lead">Three simple steps from joining to becoming interview-ready.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Join for free</h4>
+          <p>Apply through our website. No fees, no hidden costs. We review your application and onboard you into a team.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Work on real projects with teams</h4>
+          <p>You contribute to real software—our own products or client work. You use industry tools and follow real workflows. You collaborate like in a real company.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Become interview-ready</h4>
+          <p>You leave with real experience, a portfolio, and the confidence to talk about what you’ve built. Final-year students can also earn while working on real products.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHAT STUDENTS GAIN -->
+  <section id="what-you-gain" class="section home-section home-section-alt">
+    <div class="container">
+      <h3>What You Gain</h3>
+      <p class="section-lead">Not just a certificate—things that actually help you in interviews and on the job.</p>
+      <ul class="gains-list">
+        <li><i class="fas fa-check-circle"></i> <strong>Real project experience</strong> — Shipped code, not dummy tasks.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Portfolio</strong> — Work you can show to recruiters and hiring managers.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Confidence</strong> — Knowing you’ve done real work in a team.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Industry tools & workflows</strong> — Git, agile practices, and how products are built.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Interview readiness</strong> — Stories and projects to talk about.</li>
+      </ul>
+      <p class="gains-closing">This is the kind of experience recruiters actually ask about.</p>
+    </div>
+  </section>
+
+  <!-- 6. INTERNSHIP OPPORTUNITIES (summary) -->
+  <section id="opportunities" class="section home-section">
+    <div class="container">
+      <h3>Internship Opportunities</h3>
+      <p class="section-lead">We offer roles across common streams. Pick what fits your interest and apply.</p>
+      <p class="opportunities-clarify">These are real working roles, not classroom training.</p>
+      <div class="roles-tags">
+        <span class="role-tag">Frontend</span>
+        <span class="role-tag">Full Stack</span>
+        <span class="role-tag">UI/UX</span>
+        <span class="role-tag">Data</span>
+        <span class="role-tag">DevOps</span>
+        <span class="role-tag">Backend</span>
+        <span class="role-tag">Mobile</span>
+      </div>
+      <div class="section-cta">
+        <a href="apply.html" class="btn btn-primary">Explore All Opportunities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SUSTAINABILITY & TRUST -->
+  <section id="sustainability" class="section home-section home-section-alt">
+    <div class="container">
+      <h3>How We Keep It Free</h3>
+      <p>You might wonder how internships can be free. Here’s how it works.</p>
+      <p>DeepTrics builds its own software products and also works with real clients. Revenue from product development and client work funds student internships and learning. That’s how the program stays sustainable—and stays free for students. No fees from you, no compromise on real work.</p>
+      <p>This model allows us to stay independent, ethical, and student-first.</p>
+    </div>
+  </section>
+
+  <!-- 8. COLLEGES & PARTNERS -->
+  <section id="colleges-partners" class="section home-section">
+    <div class="container">
+      <h3>Colleges & Partners</h3>
+      <p>If you’re from a college or an institution, we’d like to work with you. DeepTrics acts as a bridge between education and industry—we help students get real experience while they study. If you want to collaborate or explore partnerships, get in touch.</p>
+      <div class="section-cta">
+        <a href="college-partnership.html" class="btn btn-secondary">Partner With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FINAL CTA -->
+  <section id="final-cta" class="section home-cta home-section">
+    <div class="container">
+      <div class="cta-box final-cta-box">
+        <h3>Ready to start?</h3>
+        <p>Apply for a free internship. No fees, real work, real learning. We’re here to help you get the experience you need.</p>
+        <div class="cta-buttons">
+          <a href="apply.html" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            Apply for Free Internship
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -217,121 +174,38 @@ Verified internship certificates, personal feedback, and a platform to showcase 
         <div class="footer-grid">
             <div class="footer-logo">
                 <h1 style="color: var(--accent-color);">DeepTrics</h1>
-                <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+                <p class="footer-tagline">Learn. Build. Evolve.</p>
+                <p class="footer-tagline-support">A global platform for real-world internships, fellowships, and product development.</p>
             </div>
 
             <div class="footer-links-column">
                 <h4>About Us</h4>
                 <a href="about.html">Company</a>
                 <a href="careers.html">Careers</a>
+                <a href="internships.html">Internships</a>
+                <a href="college-partnership.html">Colleges & Universities</a>
             </div>
 
             <div class="footer-links-column">
                 <h4>Connect</h4>
                 <a href="contact.html">Contact</a>
+                <a href="services.html">Services</a>
             </div>
 
             <div class="footer-social">
-                <a href="https://x.com/DeepTrics" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/deeptrics_" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com/DeepTrics" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/deeptrics_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
 
-        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
     </div>
-</footer>
-<div class="hidden" id="spinner" style="height: 100vh;position:fixed;top: 4rem;left: 0;right: 0;"><span class="loader"></span></div>
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
-    const form = document.getElementById('myForm');
-    let status = document.getElementById('statusMessage');
+  </footer>
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      let spinner = document.getElementById('spinner');
-      spinner.classList.remove('hidden');
-      spinner.classList.add('show');
-      document.body.style.overflow='hidden';
-      const formData = new FormData(form);
-      const data = new URLSearchParams(formData);
-      console.log(data);
-
-      fetch('https://script.google.com/macros/s/AKfycby_HinKrRtEfFuNfXT5ERS44hRFREuC3M-TsuBPq9cSdVsW3zxaIsK8J0ey4dMNBhjVLQ/exec', {
-        method: 'POST',
-        body: data,
-        mode:'no-cors'
-      })
-      .then(response => response.text())
-      .then(result => {
-        status.innerText = "Form submitted successfully!";
-        status.classList.add('success-message');
-        form.reset(); 
-        spinner.classList.remove('show');
-        spinner.classList.add('hidden');
-        document.body.style.overflow='auto';
-      })
-      .catch(error => {
-        status.innerText = "Something went wrong. Please try again.";
-        status.classList.add('error-message');
-        spinner.classList.remove('show');
-        spinner.classList.add('hidden');
-        document.body.style.overflow='auto';
-      });
-    });
-
-  </script>
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
-
-    const sections = document.querySelectorAll('.section');
-
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-          section.classList.add('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-    
-  </script>
-  <script>
-  const quote = document.querySelector('#motto');
-  const fullText = quote.textContent;
-  let i = 0;
-
-  function typeWriter() {
-    if (i < fullText.length) {
-      quote.textContent += fullText.charAt(i);
-      i++;
-      setTimeout(typeWriter, 50);
-    } else {
-      // After finishing typing, wait 3 seconds then restart
-      setTimeout(() => {
-        quote.textContent = "";
-        i = 0;
-        typeWriter();
-      }, 3000);
-    }
-  }
-
-  window.onload = () => {
-    quote.textContent = ""; // Clear initial text
-    typeWriter();
-  };
-</script>
-
+  <div class="hidden" id="spinner" style="height: 100vh;position:fixed;top: 4rem;left: 0;right: 0;"><span class="loader"></span></div>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

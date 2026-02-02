@@ -3,61 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - DeepTrics</title>
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> -->
+  <meta name="description" content="Contact DeepTrics. Get in touch for partnerships, services, or general inquiries. We respond to all messages.">
+  <title>Contact - DeepTrics | Get in Touch</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
     <div class="container">
-        <div class="logo" style="display: flex;align-items: center;"><img src="assets/images/logo/DeepTrics.png" alt="" style="height: 40px;"></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
+          </a>
+        </div>
         <nav>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="college-partnership.html">Colleges & Universities</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
                 <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="burger" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </div>
 </header>
-<div class="page__banner">
-  <div class="page__banner-shape">
-    <img src="assets/images/background/page-banner-shape.png" alt="image">
-  </div>
-  <div class="bs-container">
-    <div class="row justify-content-between align-items-center">
-      <div class="col-xl-6 col-lg-7">
-        <div class="page__banner-content">
-          <h2>Contact Us</h2>
-          <span><a href="index.html">Home</a>
-            <span>|</span>
-            Contact Us
-          </span>
+
+  <div class="page__banner">
+    <div class="page__banner-shape">
+      <img src="assets/images/background/page-banner-shape.png" alt="">
+    </div>
+    <div class="bs-container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-xl-6 col-lg-7">
+          <div class="page__banner-content">
+            <p class="page__banner-intro">Get in touch for partnership discussions, commercial projects, or general inquiries. We respond to all messages.</p>
+            <p class="page__banner-intro">Whether you are an institution exploring collaboration, a client interested in our <a href="services.html">services</a>, or a student with a question—we are here to help.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-xl-4 col-lg-5">
-        <div class="page__banner-img">
-          <img src="assets/images/background/page-banner-img.png" alt="image">
+        <div class="col-xl-4 col-lg-5">
+          <div class="page__banner-img">
+            <img src="assets/images/background/page-banner-img.png" alt="">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-  <section id="contact" class="section contact visible">
+
+  <section id="contact-form-section" class="section home-section visible">
     <div class="container">
-      <h3>Contact Us</h3>
-      <p>Let’s collaborate and build the future together. Reach out to us with your project idea.</p>
-      <form id="myForm">
-        <!-- status after submission -->
+      <form id="myForm" class="contact-form">
         <div id="statusMessage"></div>
-        <input type="text" placeholder="Your Name" required name="Name"/>
-        <input type="email" placeholder="Your Email" required name="email"/>
-        <textarea placeholder="Your Message" required name="body"></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <div class="form-group">
+          <label for="contactName">Your Name <span class="required">*</span></label>
+          <input type="text" id="contactName" name="Name" placeholder="Your name" required autocomplete="name"/>
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Your Email <span class="required">*</span></label>
+          <input type="email" id="contactEmail" name="email" placeholder="your.email@example.com" required autocomplete="email"/>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Your Message <span class="required">*</span></label>
+          <textarea id="contactMessage" name="body" rows="5" placeholder="How can we help?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
     </div>
   </section>
@@ -67,18 +80,22 @@
         <div class="footer-grid">
             <div class="footer-logo">
                 <h1 style="color: var(--accent-color);">DeepTrics</h1>
-                <p style="font-size: 0.9rem; color: var(--muted-text); margin-top: 0.3rem;">we code your vision</p>
+                <p class="footer-tagline">Learn. Build. Evolve.</p>
+                <p class="footer-tagline-support">A global platform for real-world internships, fellowships, and product development.</p>
             </div>
 
             <div class="footer-links-column">
                 <h4>About Us</h4>
                 <a href="about.html">Company</a>
                 <a href="careers.html">Careers</a>
+                <a href="internships.html">Internships</a>
+                <a href="college-partnership.html">Colleges & Universities</a>
             </div>
 
             <div class="footer-links-column">
                 <h4>Connect</h4>
                 <a href="contact.html">Contact</a>
+                <a href="services.html">Services</a>
             </div>
 
             <div class="footer-social">
@@ -89,51 +106,10 @@
             </div>
         </div>
 
-        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--muted-text); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
     </div>
 </footer>
 <div class="hidden" id="spinner" style="height: 100vh;position:fixed;top: 4rem;left: 0;right: 0;"><span class="loader"></span></div>
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
-    const form = document.getElementById('myForm');
-    let status = document.getElementById('statusMessage');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      let spinner = document.getElementById('spinner');
-      spinner.classList.remove('hidden');
-      spinner.classList.add('show');
-      document.body.style.overflow='hidden';
-      const formData = new FormData(form);
-      const data = new URLSearchParams(formData);
-      console.log(data);
-
-      fetch('https://script.google.com/macros/s/AKfycby_HinKrRtEfFuNfXT5ERS44hRFREuC3M-TsuBPq9cSdVsW3zxaIsK8J0ey4dMNBhjVLQ/exec', {
-        method: 'POST',
-        body: data,
-        mode:'no-cors'
-      })
-      .then(response => response.text())
-      .then(result => {
-        status.innerText = "Form submitted successfully!";
-        status.classList.add('success-message');
-        form.reset(); 
-        spinner.classList.remove('show');
-        spinner.classList.add('hidden');
-        document.body.style.overflow='auto';
-      })
-      .catch(error => {
-        status.innerText = "Something went wrong. Please try again.";
-        status.classList.add('error-message');
-        spinner.classList.remove('show');
-        spinner.classList.add('hidden');
-        document.body.style.overflow='auto';
-      });
-    });
-
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
