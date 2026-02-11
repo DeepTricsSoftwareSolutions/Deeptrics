@@ -71,13 +71,24 @@ const initTypewriter = () => {
 // Initialize typewriter if element exists
 initTypewriter();
 
+// Contact form Web App URL - create a separate Web App for Contact (Part 2 in docs/GOOGLE_SHEETS_SETUP.md)
+// Replace with your Contact Form Web App URL; using the Apply form URL below will not store Contact data correctly
+const CONTACT_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwk59RnV2PlZzTkj2IrnXxvH2D1wxP4O-iBXMQRKbuipHDBOAtLzOSMbxylGiV7dCOQLw/exec';
+
 // Form submission handler
 const initContactForm = () => {
   const form = document.getElementById('myForm');
   if (!form) return;
   
-  const status = document.getElementById('statusMessage');
+  const status = document.getElementById('contactStatus');
+  const formWrapper = document.getElementById('contactFormWrapper');
   const spinner = document.getElementById('spinner');
+
+  const setStatus = (message, type) => {
+    if (!status) return;
+    status.textContent = message;
+    status.className = 'form-status ' + (type === 'success' ? 'success-message' : 'error-message');
+  };
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -87,23 +98,24 @@ const initContactForm = () => {
       spinner.classList.add('show');
       document.body.style.overflow = 'hidden';
     }
+    setStatus('', '');
     
     const formData = new FormData(form);
     const data = new URLSearchParams(formData);
 
-    fetch('https://script.google.com/macros/s/AKfycby_HinKrRtEfFuNfXT5ERS44hRFREuC3M-TsuBPq9cSdVsW3zxaIsK8J0ey4dMNBhjVLQ/exec', {
+    fetch(CONTACT_FORM_SCRIPT_URL, {
       method: 'POST',
       body: data,
       mode: 'no-cors'
     })
-    .then(response => response.text())
-    .then(result => {
-      if (status) {
-        status.innerText = "Form submitted successfully!";
-        status.classList.add('success-message');
-        status.classList.remove('error-message');
-      }
+    .then(() => {
+      setStatus('Message sent successfully! We\'ll get back to you soon.', 'success');
       form.reset();
+      if (formWrapper) formWrapper.style.display = 'none';
+      if (status) {
+        status.style.display = 'block';
+        status.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
       
       if (spinner) {
         spinner.classList.remove('show');
@@ -111,12 +123,8 @@ const initContactForm = () => {
       }
       document.body.style.overflow = 'auto';
     })
-    .catch(error => {
-      if (status) {
-        status.innerText = "Something went wrong. Please try again.";
-        status.classList.add('error-message');
-        status.classList.remove('success-message');
-      }
+    .catch(() => {
+      setStatus('Something went wrong. Please try again.', 'error');
       
       if (spinner) {
         spinner.classList.remove('show');
@@ -136,6 +144,7 @@ const initApplicationForm = () => {
   if (!form) return;
 
   const status = document.getElementById('applyStatus');
+  const formWrapper = document.getElementById('applyFormWrapper');
   const submitBtn = form.querySelector('button[type="submit"]');
 
   const setStatus = (message, type) => {
@@ -175,7 +184,7 @@ const initApplicationForm = () => {
           return p;
         })();
 
-    fetch('https://script.google.com/macros/s/AKfycby_HinKrRtEfFuNfXT5ERS44hRFREuC3M-TsuBPq9cSdVsW3zxaIsK8J0ey4dMNBhjVLQ/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwxpPJfAd9U0y1BohJOv-gDBfbCSmUb1Cp0I0byj5tTFhaYoxThKkRjNGd3IrCiIc-x/exec', {
       method: 'POST',
       body: payload,
       mode: 'no-cors'
@@ -183,6 +192,11 @@ const initApplicationForm = () => {
     .then(() => {
       setStatus('Application submitted successfully!', 'success');
       form.reset();
+      if (formWrapper) formWrapper.style.display = 'none';
+      if (status) {
+        status.style.display = 'block';
+        status.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     })
     .catch(() => {
       setStatus('Something went wrong. Please try again.', 'error');

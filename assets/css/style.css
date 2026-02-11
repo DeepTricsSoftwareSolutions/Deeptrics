@@ -607,6 +607,12 @@
     margin-bottom: 1rem;
     min-height: 1.5em;
   }
+  .apply-main .form-status.success-message,
+  #contact-form-section .form-status.success-message {
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
   .success-message {
     color: var(--success-color);
     font-size: 1.2rem;
