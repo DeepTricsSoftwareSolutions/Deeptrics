@@ -1,0 +1,19 @@
+/**
+ * Design tokens & CSS variables
+ * Used across the site for consistent branding
+ */
+
+:root {
+  --primary-color: #1F3A5F;
+  --accent-color: #1ABC9C;
+  --accent-hover: #17a089;
+  --soft-bg: #E6F0FA;
+  --text-primary: #1C1C1C;
+  --text-muted: #6B7280;
+  --border-color: #D1D5DB;
+  --success-color: #16A34A;
+  --error-color: #dc3545;
+  --bg-color: #ffffff;
+  --text-dark: var(--text-primary);
+  --shadow: rgba(31, 58, 95, 0.12);
+}

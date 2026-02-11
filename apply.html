@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Apply for DeepTrics free internships and fellowship programs. Open to students worldwide. No fees.">
   <title>Apply - Internships & Fellowships | DeepTrics</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/images/logo/DeepTrics.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body class="apply-page">
@@ -46,9 +47,10 @@
         <p>DeepTrics offers free, real-world internships and fellowship programs. There are no fees. We value curiosity, responsibility, and willingness to learn more than prior experience.</p>
       </div>
 
-      <form id="globalApplicationForm" class="apply-form" action="#" method="post" novalidate>
+      <div id="applyStatus" class="form-status" aria-live="polite"></div>
 
-        <!-- 1. BASIC INFORMATION -->
+      <form id="globalApplicationForm" class="apply-form" action="#" method="post">
+
         <fieldset class="form-section">
           <legend><span class="legend-num">1</span> Basic Information</legend>
 
@@ -80,72 +82,33 @@
               <option value="AL">Albania</option>
               <option value="DZ">Algeria</option>
               <option value="AR">Argentina</option>
-              <option value="AM">Armenia</option>
               <option value="AU">Australia</option>
               <option value="AT">Austria</option>
               <option value="BD">Bangladesh</option>
               <option value="BE">Belgium</option>
               <option value="BR">Brazil</option>
-              <option value="BG">Bulgaria</option>
               <option value="CA">Canada</option>
-              <option value="CL">Chile</option>
               <option value="CN">China</option>
-              <option value="CO">Colombia</option>
-              <option value="HR">Croatia</option>
-              <option value="EG">Egypt</option>
-              <option value="EE">Estonia</option>
-              <option value="ET">Ethiopia</option>
-              <option value="FI">Finland</option>
               <option value="FR">France</option>
               <option value="DE">Germany</option>
-              <option value="GH">Ghana</option>
-              <option value="GR">Greece</option>
-              <option value="HK">Hong Kong</option>
-              <option value="HU">Hungary</option>
               <option value="IN">India</option>
-              <option value="ID">Indonesia</option>
-              <option value="IR">Iran</option>
-              <option value="IQ">Iraq</option>
               <option value="IE">Ireland</option>
-              <option value="IL">Israel</option>
               <option value="IT">Italy</option>
               <option value="JP">Japan</option>
-              <option value="JO">Jordan</option>
-              <option value="KE">Kenya</option>
-              <option value="KW">Kuwait</option>
               <option value="MY">Malaysia</option>
               <option value="MX">Mexico</option>
-              <option value="MA">Morocco</option>
               <option value="NL">Netherlands</option>
-              <option value="NZ">New Zealand</option>
               <option value="NG">Nigeria</option>
-              <option value="NO">Norway</option>
               <option value="PK">Pakistan</option>
-              <option value="PE">Peru</option>
               <option value="PH">Philippines</option>
-              <option value="PL">Poland</option>
-              <option value="PT">Portugal</option>
-              <option value="QA">Qatar</option>
-              <option value="RO">Romania</option>
-              <option value="RU">Russia</option>
-              <option value="SA">Saudi Arabia</option>
               <option value="SG">Singapore</option>
               <option value="ZA">South Africa</option>
               <option value="KR">South Korea</option>
               <option value="ES">Spain</option>
               <option value="LK">Sri Lanka</option>
-              <option value="SE">Sweden</option>
-              <option value="CH">Switzerland</option>
-              <option value="TW">Taiwan</option>
-              <option value="TZ">Tanzania</option>
-              <option value="TH">Thailand</option>
-              <option value="TR">Turkey</option>
-              <option value="UG">Uganda</option>
-              <option value="UA">Ukraine</option>
               <option value="AE">United Arab Emirates</option>
               <option value="GB">United Kingdom</option>
               <option value="US">United States</option>
-              <option value="VN">Vietnam</option>
               <option value="OTHER">Other</option>
             </select>
             <span id="country-helper" class="helper-text">Where you currently live</span>
@@ -155,35 +118,15 @@
             <label for="timezone">Time Zone <span class="required">*</span></label>
             <select id="timezone" name="timezone" required aria-describedby="timezone-helper">
               <option value="">Select time zone</option>
-              <option value="UTC-12">UTC-12</option>
-              <option value="UTC-11">UTC-11</option>
-              <option value="UTC-10">UTC-10 (e.g. Hawaii)</option>
-              <option value="UTC-9">UTC-9 (e.g. Alaska)</option>
               <option value="UTC-8">UTC-8 (e.g. Pacific US)</option>
-              <option value="UTC-7">UTC-7 (e.g. Mountain US)</option>
-              <option value="UTC-6">UTC-6 (e.g. Central US)</option>
               <option value="UTC-5">UTC-5 (e.g. Eastern US)</option>
-              <option value="UTC-4">UTC-4 (e.g. Atlantic)</option>
-              <option value="UTC-3">UTC-3 (e.g. Brazil)</option>
-              <option value="UTC-2">UTC-2</option>
-              <option value="UTC-1">UTC-1</option>
               <option value="UTC+0">UTC+0 (e.g. UK)</option>
               <option value="UTC+1">UTC+1 (e.g. Central Europe)</option>
-              <option value="UTC+2">UTC+2 (e.g. Eastern Europe)</option>
-              <option value="UTC+3">UTC+3 (e.g. Moscow)</option>
-              <option value="UTC+4">UTC+4 (e.g. UAE)</option>
-              <option value="UTC+5">UTC+5 (e.g. Pakistan)</option>
               <option value="UTC+5:30">UTC+5:30 (India)</option>
-              <option value="UTC+6">UTC+6 (e.g. Bangladesh)</option>
-              <option value="UTC+7">UTC+7 (e.g. Thailand)</option>
               <option value="UTC+8">UTC+8 (e.g. Singapore, China)</option>
-              <option value="UTC+9">UTC+9 (e.g. Japan)</option>
-              <option value="UTC+10">UTC+10 (e.g. Australia East)</option>
-              <option value="UTC+11">UTC+11</option>
-              <option value="UTC+12">UTC+12</option>
               <option value="OTHER_TZ">Other</option>
             </select>
-            <span id="timezone-helper" class="helper-text">Used for scheduling; you can change later if needed</span>
+            <span id="timezone-helper" class="helper-text">Used for scheduling</span>
           </div>
 
           <div class="form-group">
@@ -198,7 +141,7 @@
 
           <div class="form-group">
             <label for="degree">Degree / Program <span class="required">*</span></label>
-            <input type="text" id="degree" name="degree" placeholder="e.g. Computer Science, B.S. / B.Tech / M.S." required>
+            <input type="text" id="degree" name="degree" placeholder="e.g. Computer Science, B.Tech" required>
           </div>
 
           <div class="form-group">
@@ -214,7 +157,6 @@
           </div>
         </fieldset>
 
-        <!-- 2. PROGRAM & ROLE SELECTION -->
         <fieldset class="form-section">
           <legend><span class="legend-num">2</span> Program & Role Selection</legend>
 
@@ -246,11 +188,10 @@
 
           <div class="form-group">
             <label for="whyInterested">Why are you interested in this program? <span class="required">*</span></label>
-            <textarea id="whyInterested" name="whyInterested" rows="4" placeholder="A few lines about your motivation and what draws you to this program." required></textarea>
+            <textarea id="whyInterested" name="whyInterested" rows="4" placeholder="A few lines about your motivation." required></textarea>
           </div>
         </fieldset>
 
-        <!-- 3. EXPERIENCE & BACKGROUND (Optional) -->
         <fieldset class="form-section">
           <legend><span class="legend-num">3</span> Experience & Background <span class="optional">(optional)</span></legend>
 
@@ -270,16 +211,15 @@
 
           <div class="form-group">
             <label for="portfolioLink">GitHub / Portfolio / Project link <span class="optional">(optional)</span></label>
-            <input type="url" id="portfolioLink" name="portfolioLink" placeholder="https://github.com/yourprofile or portfolio URL">
+            <input type="url" id="portfolioLink" name="portfolioLink" placeholder="https://github.com/yourprofile">
           </div>
 
           <div class="form-group">
             <label for="hopeToLearn">What do you hope to learn or gain from this program?</label>
-            <textarea id="hopeToLearn" name="hopeToLearn" rows="3" placeholder="Skills, experience, or goals you have in mind."></textarea>
+            <textarea id="hopeToLearn" name="hopeToLearn" rows="3" placeholder="Skills or goals you have in mind."></textarea>
           </div>
         </fieldset>
 
-        <!-- 4. AVAILABILITY & COMMITMENT -->
         <fieldset class="form-section">
           <legend><span class="legend-num">4</span> Availability & Commitment</legend>
 
@@ -305,7 +245,7 @@
           </div>
 
           <div class="form-group">
-            <label>Are you comfortable working with distributed teams across time zones? <span class="required">*</span></label>
+            <label>Comfortable working with distributed teams across time zones? <span class="required">*</span></label>
             <div class="radio-group">
               <label class="radio-label">
                 <input type="radio" name="comfortableTimezones" value="Yes" id="tzYes" required>
@@ -319,10 +259,9 @@
           </div>
         </fieldset>
 
-        <!-- 5. EXPECTATION & ETHICS CHECK -->
         <fieldset class="form-section">
           <legend><span class="legend-num">5</span> Expectation & Ethics Check <span class="required">*</span></legend>
-          <p class="helper-text">All boxes must be checked. This helps us ensure a respectful and productive experience for everyone.</p>
+          <p class="helper-text">All boxes must be checked.</p>
 
           <div class="form-group checkbox-group">
             <label class="checkbox-label">
@@ -350,12 +289,10 @@
           </div>
         </fieldset>
 
-        <!-- 6. FINAL NOTES -->
         <div class="form-section form-notes" role="note">
-          <p>We review applications thoughtfully. If selected, you will receive next steps by email. Response times may vary based on program availability.</p>
+          <p>We review applications thoughtfully. If selected, you will receive next steps by email.</p>
         </div>
 
-        <!-- 7. SUBMIT -->
         <div class="form-submit-wrap">
           <button type="submit" class="btn btn-primary">
             Apply for Internship / Fellowship
@@ -368,35 +305,36 @@
 
   <footer>
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-logo">
-          <h1 style="color: var(--accent-color);">DeepTrics</h1>
-          <p class="footer-tagline">Learn. Build. Evolve.</p>
-          <p class="footer-tagline-support">A global platform for real-world internships, fellowships, and product development.</p>
-        </div>
-        <div class="footer-links-column">
-          <h4>About Us</h4>
-          <a href="about.html">Company</a>
-          <a href="careers.html">Careers</a>
-          <a href="internships.html">Internships</a>
-          <a href="college-partnership.html">Colleges & Universities</a>
-        </div>
-        <div class="footer-links-column">
-          <h4>Connect</h4>
-          <a href="contact.html">Contact</a>
+      <div class="footer-top-row">
+        <a href="index.html" class="footer-logo-link">
+          <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics">
+        </a>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
           <a href="services.html">Services</a>
-        </div>
-        <div class="footer-social">
-          <a href="https://x.com/DeepTrics" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/deeptrics_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="internships.html">Internships</a>
+          <a href="careers.html">Careers</a>
+        </nav>
+        <a href="contact.html" class="footer-contact-btn">Contact</a>
+      </div>
+      <div class="footer-social-row">
+        <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/deeptrics_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/DeepTrics" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="footer-bottom-row">
+        <p class="footer-copyright">© Copyright 2025 Deeptrics. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Legal</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
-      <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted); text-align: center;">© 2025 Deeptrics. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="assets/js/modules/apply-form-payload.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
