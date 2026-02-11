@@ -119,12 +119,28 @@
             <label for="timezone">Time Zone <span class="required">*</span></label>
             <select id="timezone" name="timezone" required aria-describedby="timezone-helper">
               <option value="">Select time zone</option>
-              <option value="UTC-8">UTC-8 (e.g. Pacific US)</option>
-              <option value="UTC-5">UTC-5 (e.g. Eastern US)</option>
-              <option value="UTC+0">UTC+0 (e.g. UK)</option>
-              <option value="UTC+1">UTC+1 (e.g. Central Europe)</option>
-              <option value="UTC+5:30">UTC+5:30 (India)</option>
-              <option value="UTC+8">UTC+8 (e.g. Singapore, China)</option>
+              <optgroup label="Americas">
+                <option value="UTC-8">UTC-8 (Pacific – PST/PDT)</option>
+                <option value="UTC-7">UTC-7 (Mountain – MST/MDT)</option>
+                <option value="UTC-6">UTC-6 (Central – CST/CDT)</option>
+                <option value="UTC-5">UTC-5 (Eastern – EST/EDT)</option>
+                <option value="UTC-4">UTC-4 (Atlantic)</option>
+                <option value="UTC-3">UTC-3 (Brazil, Argentina)</option>
+              </optgroup>
+              <optgroup label="Europe & Africa">
+                <option value="UTC+0">UTC+0 (UK, GMT)</option>
+                <option value="UTC+1">UTC+1 (Central Europe – CET)</option>
+                <option value="UTC+2">UTC+2 (Eastern Europe, South Africa)</option>
+                <option value="UTC+3">UTC+3 (Moscow, East Africa)</option>
+              </optgroup>
+              <optgroup label="Asia & Oceania">
+                <option value="UTC+4">UTC+4 (Dubai, Gulf)</option>
+                <option value="UTC+5:30">UTC+5:30 (India – IST)</option>
+                <option value="UTC+7">UTC+7 (Thailand, Vietnam)</option>
+                <option value="UTC+8">UTC+8 (Singapore, China, Perth)</option>
+                <option value="UTC+9">UTC+9 (Japan, Korea)</option>
+                <option value="UTC+10">UTC+10 (Australia East)</option>
+              </optgroup>
               <option value="OTHER_TZ">Other</option>
             </select>
             <span id="timezone-helper" class="helper-text">Used for scheduling</span>
