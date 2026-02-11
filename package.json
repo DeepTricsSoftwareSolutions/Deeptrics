@@ -1,0 +1,16 @@
+{
+  "name": "deeptrics",
+  "version": "1.0.0",
+  "description": "DeepTrics website",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^24.0.0"
+  }
+}

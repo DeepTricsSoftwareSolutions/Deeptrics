@@ -130,6 +130,72 @@ const initContactForm = () => {
 // Initialize contact form if it exists
 initContactForm();
 
+// Application form submission handler (Google Sheets)
+const initApplicationForm = () => {
+  const form = document.getElementById('globalApplicationForm');
+  if (!form) return;
+
+  const status = document.getElementById('applyStatus');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  const setStatus = (message, type) => {
+    if (!status) return;
+    status.textContent = message;
+    status.classList.remove('error-message', 'success-message');
+    if (type === 'error') status.classList.add('error-message');
+    if (type === 'success') status.classList.add('success-message');
+  };
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    setStatus('Submitting...', null);
+    if (submitBtn) submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+    const payload = (typeof window.buildApplicationPayload === 'function')
+      ? window.buildApplicationPayload(formData)
+      : (function() {
+          const g = (k) => formData.get(k) || '';
+          const p = new URLSearchParams();
+          p.append('Timestamp', new Date().toISOString());
+          p.append('firstName', g('firstName')); p.append('middleName', g('middleName')); p.append('lastName', g('lastName'));
+          p.append('email', g('email')); p.append('country', g('country')); p.append('timezone', g('timezone'));
+          p.append('phone', g('phone')); p.append('institution', g('institution')); p.append('degree', g('degree'));
+          p.append('currentStatus', g('currentStatus')); p.append('programType', g('programType'));
+          p.append('preferredRole', g('preferredRole')); p.append('whyInterested', g('whyInterested'));
+          p.append('hasProjects', g('hasProjects')); p.append('portfolioLink', g('portfolioLink'));
+          p.append('hopeToLearn', g('hopeToLearn')); p.append('weeklyHours', g('weeklyHours'));
+          p.append('workingMode', g('workingMode')); p.append('comfortableTimezones', g('comfortableTimezones'));
+          p.append('expectFreeRealWork', g('expectFreeRealWork')); p.append('expectNotCertificateOnly', g('expectNotCertificateOnly'));
+          p.append('expectCollaborate', g('expectCollaborate')); p.append('expectCommitTime', g('expectCommitTime'));
+          return p;
+        })();
+
+    fetch('https://script.google.com/macros/s/AKfycby_HinKrRtEfFuNfXT5ERS44hRFREuC3M-TsuBPq9cSdVsW3zxaIsK8J0ey4dMNBhjVLQ/exec', {
+      method: 'POST',
+      body: payload,
+      mode: 'no-cors'
+    })
+    .then(() => {
+      setStatus('Application submitted successfully!', 'success');
+      form.reset();
+    })
+    .catch(() => {
+      setStatus('Something went wrong. Please try again.', 'error');
+    })
+    .finally(() => {
+      if (submitBtn) submitBtn.disabled = false;
+    });
+  });
+};
+
+// Initialize application form if it exists
+initApplicationForm();
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {

@@ -1,19 +1,11 @@
-:root {
-    --primary-color: #1F3A5F;
-    --accent-color: #1ABC9C;
-    --accent-hover: #17a089;
-    --soft-bg: #E6F0FA;
-    --text-primary: #1C1C1C;
-    --text-muted: #6B7280;
-    --border-color: #D1D5DB;
-    --success-color: #16A34A;
-    --error-color: #dc3545;
-    --bg-color: #ffffff;
-    --text-dark: var(--text-primary);
-    --shadow: rgba(31, 58, 95, 0.12);
-  }
+/**
+ * Main stylesheet - imports variables and base styles
+ * @see variables.css for design tokens
+ */
+@import 'variables.css';
 
-  * {
+/* ===== Base & Reset ===== */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -507,60 +499,113 @@
   .card:hover img {
     transform: scale(1.2) translateY(-10px);
   }
-  .footer-grid {
+  /* Footer - same background as header */
+  .footer-top-row {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 1rem;
-    border-top: 1px solid #2a2d34;
-    padding-top: 0.75rem;
-    margin-top: 0.75rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
-  .footer-links-column {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-  
-  .footer-links-column h4 {
-    color: var(--text-primary);
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .footer-links-column a {
-    color: var(--text-muted);
+  .footer-logo-link {
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    font-size: 0.85rem;
+  }
+  .footer-logo-link img {
+    height: 50px;
+    width: auto;
+  }
+  .footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-nav a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     transition: color 0.3s;
   }
-  
-  .footer-links-column a:hover {
+  .footer-nav a:hover {
     color: var(--accent-color);
   }
-  
-  .footer-logo {
-    flex: 1 1 160px;
+  .footer-contact-btn {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: border-color 0.3s, color 0.3s;
   }
-  
-  .footer-social {
+  .footer-contact-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+  .footer-social-row {
     display: flex;
-    width: calc(100vw - 10%);
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    font-size: 1.1rem;
+    padding: 1rem 0;
   }
-  
-  .footer-social a {
-    color: var(--accent-color);
+  .footer-social-row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    transition: transform 0.3s ease;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
   }
-  
-  .footer-social a:hover {
-    transform: scale(1.2);
+  .footer-social-row a:hover {
+    background: var(--accent-color);
+    color: #fff;
+    transform: scale(1.1);
+  }
+  .footer-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .footer-copyright {
+    margin: 0;
+  }
+  .footer-legal {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer-legal a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-legal a:hover {
+    color: var(--accent-color);
+  }
+  .form-status {
+    margin-bottom: 1rem;
+    min-height: 1.5em;
   }
   .success-message {
     color: var(--success-color);
@@ -698,13 +743,25 @@
     .burger {
       display: block;
     }
-    .footer-grid {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .footer-logo {
-        flex: auto;
-      }
+    .footer-top-row {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .footer-nav {
+      order: 1;
+      width: 100%;
+    }
+    .footer-logo-link {
+      order: 0;
+    }
+    .footer-contact-btn {
+      order: 2;
+    }
+    .footer-bottom-row {
+      flex-direction: column;
+      text-align: center;
+    }
     .menu{
       display: none;
     }
@@ -1874,76 +1931,11 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 2rem;
 }
 
-/* Footer - compact height and grid */
+/* Footer - same background as header */
 footer {
   background: var(--primary-color);
-  color: rgba(255, 255, 255, 0.9);
-  padding: 0.85rem 0;
-}
-
-.footer-grid {
+  padding: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 0.75rem;
-  margin-top: 0.75rem;
-  gap: 1rem;
-}
-
-.footer-logo h1 {
-  color: #ffffff !important;
-  font-size: 1.1rem;
-}
-
-.footer-logo p {
-  color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 0.85rem;
-  margin-bottom: 0;
-}
-
-.footer-tagline {
-  color: rgba(255, 255, 255, 0.92) !important;
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.25rem;
-  font-weight: 500;
-}
-
-.footer-tagline-support {
-  color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 0.8rem;
-  margin: 0;
-  line-height: 1.4;
-  max-width: 20em;
-}
-
-.footer-links-column h4 {
-  color: #ffffff;
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
-}
-
-.footer-links-column a {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.85rem;
-}
-
-.footer-links-column a:hover {
-  color: var(--accent-color);
-}
-
-.footer-social a {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1rem;
-}
-
-.footer-social a:hover {
-  color: var(--accent-color);
-}
-
-footer p[style*="text-muted"],
-footer .container > p:last-child {
-  color: rgba(255, 255, 255, 0.7) !important;
-  margin-top: 0.75rem !important;
-  font-size: 0.8rem;
 }
 
 /* Update Job Cards for Light Theme */

@@ -2,6 +2,24 @@
 
 Welcome to **Deeptrics**, a small yet innovative startup dedicated to providing cutting-edge software solutions tailored to meet your business needs.
 
+## Project Structure
+
+See [STRUCTURE.md](STRUCTURE.md) for folder layout, conventions, and how to add new pages or modules.
+
+## Documentation
+
+- [Google Sheets Setup](docs/GOOGLE_SHEETS_SETUP.md) – Apply form → Google Sheets integration
+
+## New Pages
+
+When adding new HTML pages, include the favicon in the `<head>` so it appears consistently:
+
+```html
+<link rel="icon" href="assets/images/logo/DeepTrics.png" type="image/png">
+```
+
+You can also rely on `favicon.ico` in the project root—browsers request it automatically for any page.
+
 ## About Us
 
 At Deeptrics, we specialize in delivering high-quality, scalable, and efficient software solutions. Our team is passionate about leveraging technology to solve real-world problems and help businesses thrive in the digital age.
