@@ -57,8 +57,9 @@
 
   <section id="contact-form-section" class="section home-section visible">
     <div class="container">
+      <div id="contactStatus" class="form-status" aria-live="polite"></div>
+      <div id="contactFormWrapper">
       <form id="myForm" class="contact-form">
-        <div id="statusMessage"></div>
         <div class="form-group">
           <label for="contactName">Your Name <span class="required">*</span></label>
           <input type="text" id="contactName" name="Name" placeholder="Your name" required autocomplete="name"/>
@@ -73,6 +74,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
+      </div>
     </div>
   </section>
 
