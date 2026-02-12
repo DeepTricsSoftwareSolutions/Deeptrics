@@ -33,9 +33,12 @@ Timestamp | firstName | middleName | lastName | email | country | timezone | pho
 
 1. In your Google Sheet, go to **Extensions** → **Apps Script**
 2. Delete any existing code in the editor
-3. Copy and paste this code:
+3. Copy and paste this code (replace `YOUR_TEAM_EMAIL@example.com` with the email address to receive notifications):
 
 ```javascript
+// Email address to receive new application notifications
+var NOTIFY_EMAIL = 'YOUR_TEAM_EMAIL@example.com';
+
 function doPost(e) {
   try {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
@@ -69,6 +72,25 @@ function doPost(e) {
     ];
 
     sheet.appendRow(rowData);
+
+    // Send email notification
+    try {
+      var fullName = [data.firstName, data.middleName, data.lastName].filter(Boolean).join(' ');
+      var subject = 'New Internship Application: ' + (fullName || data.email || 'Unknown');
+      var body = 'A new internship/fellowship application has been submitted.\n\n' +
+        'Name: ' + (fullName || '-') + '\n' +
+        'Email: ' + (data.email || '-') + '\n' +
+        'Country: ' + (data.country || '-') + '\n' +
+        'Program: ' + (data.programType || '-') + '\n' +
+        'Preferred Role: ' + (data.preferredRole || '-') + '\n' +
+        'Institution: ' + (data.institution || '-') + '\n' +
+        'Why Interested: ' + (data.whyInterested || '-').substring(0, 300) + '\n\n' +
+        'View full details in your Google Sheet.';
+      MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+    } catch (mailErr) {
+      // Log but don't fail the request if email fails
+      console.error('Email notification failed: ' + mailErr);
+    }
 
     return ContentService.createTextOutput(JSON.stringify({
       result: 'success',
@@ -123,8 +145,9 @@ function doPost(e) {
 2. Go to the **Apply** page (or click any "Apply" link)
 3. Fill out all required fields
 4. Click **Apply for Internship / Fellowship**
-5. You should see: **"Application submitted successfully!"**
+5. You should see: **"Application submitted successfully!"** (this message is shown only for the internship form, not the contact form)
 6. Open your Google Sheet — a new row should appear with the submitted data
+7. Check your inbox — you should receive an email notification at `NOTIFY_EMAIL`
 
 ---
 
@@ -195,9 +218,12 @@ The Contact form sends Name, email, and Message. It requires a **separate** Goog
 
 1. In your Contact sheet, go to **Extensions** → **Apps Script**
 2. Delete any existing code in the editor
-3. Copy and paste this code:
+3. Copy and paste this code (replace `YOUR_TEAM_EMAIL@example.com` with the email address to receive notifications):
 
 ```javascript
+// Email address to receive new contact message notifications
+var NOTIFY_EMAIL = 'YOUR_TEAM_EMAIL@example.com';
+
 function doPost(e) {
   try {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
@@ -211,6 +237,19 @@ function doPost(e) {
     ];
 
     sheet.appendRow(rowData);
+
+    // Send email notification
+    try {
+      var subject = 'New Contact Message from ' + (data.Name || data.email || 'Unknown');
+      var body = 'A new contact form submission has been received.\n\n' +
+        'Name: ' + (data.Name || '-') + '\n' +
+        'Email: ' + (data.email || '-') + '\n' +
+        'Message:\n' + (data.body || '-') + '\n\n' +
+        'View in your Google Sheet or reply directly to the sender.';
+      MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+    } catch (mailErr) {
+      console.error('Email notification failed: ' + mailErr);
+    }
 
     return ContentService.createTextOutput(JSON.stringify({
       result: 'success',
@@ -253,9 +292,21 @@ function doPost(e) {
 1. Open your website and go to **Contact**
 2. Fill out Name, Email, and Message
 3. Click **Send Message**
-4. You should see: **"Message sent successfully! We'll get back to you soon."**
+4. You should see: **"Message sent successfully! We'll get back to you soon."** (this is different from the internship form message)
 5. The form will hide and the success message will scroll into view
 6. Open your Contact Google Sheet — a new row should appear
+7. Check your inbox — you should receive an email notification at `NOTIFY_EMAIL`
+
+---
+
+## Email Notifications
+
+Both scripts send an email to `NOTIFY_EMAIL` when a submission is received. Update the `NOTIFY_EMAIL` variable at the top of each script with your team's email address.
+
+- **Apply form**: Sends applicant name, email, country, program type, preferred role, institution, and a snippet of "Why Interested"
+- **Contact form**: Sends sender name, email, and full message
+
+If the email fails (e.g. MailApp quota exceeded), the form submission still succeeds and data is saved to the sheet.
 
 ---
 
