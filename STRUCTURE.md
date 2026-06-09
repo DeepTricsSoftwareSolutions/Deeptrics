@@ -2,33 +2,31 @@
 
 ## Overview
 
-Static website for DeepTrics (free internships, services, careers). No build step—served as-is from root.
+Static website for **DeepTrics, a software development company** (products & services), with a free student internship program. No build step—served as-is from root.
 
 ## Folder Structure
 
 ```
 Deeptrics/
-├── index.html              # Homepage
-├── about.html              # About us
-├── contact.html            # Contact form
-├── services.html           # Services overview
-├── careers.html            # Careers & jobs
-├── internships.html        # Internships overview
-├── apply.html              # Application form (Google Sheets)
-├── college-partnership.html
-├── web-development.html     # Service detail
-├── ai-solutions.html       # Service detail
-├── mobile-app.html         # Service detail
-├── aiml-developer.html    # Internship role
-├── frontend-developer.html # Internship role
-├── backend-developer.html # Internship role
+├── index.html              # Homepage (software company: services, products, process)
+├── products.html           # Products showcase (currently placeholder cards — see TODO below)
+├── services.html           # 6 services: web, mobile, AI/ML, cloud/DevOps, UI/UX, custom software
+├── about.html              # About the company
+├── internships.html        # Internships overview + roles + embedded application form
+├── careers.html            # Careers & company values
+├── college-partnership.html# Institution partnerships
+├── contact.html            # Contact form (Google Sheets)
+│
+├── web-development.html     # Service detail (linked from services.html)
+├── AI-solutions.html        # Service detail (linked from services.html)
+├── Mobile-app.html          # Service detail (linked from services.html)
 │
 ├── assets/
 │   ├── css/
 │   │   ├── style.css       # Main stylesheet (imports variables)
 │   │   └── variables.css   # Design tokens (colors, etc.)
 │   ├── js/
-│   │   ├── main.js         # Global (nav, contact form, apply form handler)
+│   │   ├── main.js         # Global (nav, contact form, apply form, footer year, honeypot)
 │   │   └── modules/
 │   │       └── apply-form-payload.js  # Apply form → Google Sheets payload
 │   └── images/
@@ -43,13 +41,22 @@ Deeptrics/
 │   ├── apply-form-payload.test.js
 │   └── apply-form-handler.test.js
 │
+├── robots.txt              # SEO: allows crawling, points to sitemap
+├── sitemap.xml             # SEO: lists all pages
 ├── favicon.ico
-├── CNAME
+├── CNAME                   # www.deeptrics.com
 ├── package.json
 ├── jest.config.js
 ├── readme.md
 └── STRUCTURE.md (this file)
 ```
+
+## Navigation
+
+All pages share one header/footer. Primary nav:
+`Home · Products · Services · About · Internships · Careers · Contact`
+(College Partnership is linked from the footer.) The active link is set
+automatically by `setActiveNavLink()` in `main.js` based on the filename.
 
 ## Key Paths
 
@@ -57,22 +64,43 @@ Deeptrics/
 |------|---------|
 | `assets/css/style.css` | Main stylesheet (all pages) |
 | `assets/css/variables.css` | Design tokens (imported by style.css) |
-| `assets/js/main.js` | Handles contact form, apply form, smooth scroll, nav |
-| `assets/js/modules/apply-form-payload.js` | Builds payload for Apply form → Google Sheets |
-| `docs/GOOGLE_SHEETS_SETUP.md` | Setup guide for Google Sheets integration |
+| `assets/js/main.js` | Nav toggle (accessible), contact form, apply form, footer year, honeypot |
+| `assets/js/modules/apply-form-payload.js` | Builds payload for the Apply form → Google Sheets |
+| `internships.html` | Single internships page; the application form is embedded here (`#apply`) |
+
+## Forms (Google Apps Script + Sheets)
+
+- **Contact** (`#myForm` on `contact.html`) → `CONTACT_FORM_SCRIPT_URL` in `main.js`.
+- **Apply** (`#globalApplicationForm` on `internships.html`) → Apps Script URL in `main.js`,
+  payload built by `apply-form-payload.js` (loaded **before** `main.js`).
+- Both use `mode: 'no-cors'`, which returns an opaque response — the success
+  callback runs even if the script rejects the data. Treat the success message
+  as "sent", not "confirmed stored".
+- Both forms include a hidden **honeypot** input (`name="website"`). If filled,
+  the submit is treated as spam and dropped.
+
+## Products
+
+`products.html` and the Products section on `index.html` feature three products,
+all currently **"Coming soon"**: **SaaradhiGo** (ride-hailing), **BhojanGo**
+(food delivery), and **Data Migration & Analysis Expert**. Update the status
+badges (`.product-badge soon|beta|live`) and the "Notify me" links as each one
+launches.
 
 ## Naming Conventions
 
-- **HTML**: Lowercase with hyphens (e.g. `ai-solutions.html`, `mobile-app.html`)
+- **HTML**: Lowercase with hyphens (note: `AI-solutions.html` / `Mobile-app.html` keep their original capitalization for link stability)
 - **CSS**: Lowercase with hyphens
 - **JS**: camelCase for functions, kebab-case for files
 
 ## Adding New Pages
 
 1. Create HTML file in root (e.g. `new-page.html`)
-2. Add favicon to `<head>`: `<link rel="icon" href="assets/images/logo/DeepTrics.png" type="image/png">`
-3. Include same header/footer structure as other pages
-4. Link `assets/css/style.css` and `assets/js/main.js`
+2. Copy the `<head>` SEO block (canonical + OG/Twitter) from an existing page and update URLs/text
+3. Include the same header (with `<a class="skip-link">`, accessible `<button class="burger">`) and footer (with `<span class="footer-year">`)
+4. Wrap page content in `<main id="main">…</main>`
+5. Link `assets/css/style.css` and `assets/js/main.js`
+6. Add the page to `sitemap.xml`
 
 ## Adding New JS Modules
 
