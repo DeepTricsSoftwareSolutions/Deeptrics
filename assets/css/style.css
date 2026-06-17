@@ -2780,8 +2780,8 @@ header {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 3.5rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
   align-items: center;
 }
 .hero-copy { text-align: left; }
@@ -2850,6 +2850,114 @@ header {
 @media (max-width: 768px) {
   .highlight-band { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
 }
+
+/* ============================================================
+   FOOTER (v2) — structured, branded, multi-column
+   ============================================================ */
+.site-footer {
+  background: linear-gradient(180deg, var(--primary-deep), #0c1c30);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4.5rem 0 2rem;
+  border-top: 0;
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.75rem;
+}
+.footer-brand .footer-logo-link { display: inline-block; }
+.footer-brand .footer-logo-link img { height: 44px; width: auto; }
+.footer-tagline {
+  margin: 1.1rem 0 1.5rem;
+  max-width: 34ch;
+  font-size: .95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+}
+.footer-social { display: flex; gap: .6rem; }
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.footer-social a:hover {
+  background: var(--accent-color);
+  color: #06231d;
+  transform: translateY(-2px);
+}
+.footer-col { display: flex; flex-direction: column; }
+.footer-col h4 {
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin: 0 0 1.1rem;
+}
+.footer-col a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: .4rem 0;
+  font-size: .95rem;
+  transition: color .2s ease;
+}
+.footer-col a:hover { color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.75rem;
+  text-align: center;
+  font-size: .85rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+.footer-bottom p { margin: 0; }
+@media (max-width: 860px) {
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .footer-main { grid-template-columns: 1fr; }
+}
+
+/* Guarantee hero CTAs share one row on desktop; stack only on phones */
+.hero .hero-buttons { display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem; justify-content: flex-start; }
+.hero .hero-buttons .btn { width: auto; padding: .9rem 1.6rem; white-space: nowrap; }
+@media (max-width: 560px) {
+  .hero .hero-buttons { flex-direction: column; align-items: stretch; }
+  .hero .hero-buttons .btn { width: 100%; justify-content: center; }
+}
+
+/* ============================================================
+   ROBUSTNESS — prevent horizontal overflow at any width
+   ============================================================ */
+html, body { overflow-x: hidden; max-width: 100%; }
+/* Grid/flex children default to min-width:auto, which can exceed the viewport
+   on small screens and cause horizontal scroll + clipped text. Allow shrink. */
+.hero-grid > *,
+.programs-grid > *,
+.benefits-grid > *,
+.steps-grid > *,
+.footer-main > * { min-width: 0; }
+.hero-copy h1,
+.hero-sub,
+.section h3,
+.home-section h3 { overflow-wrap: break-word; }
+.hero-meta { overflow-wrap: anywhere; }
+
+@media (max-width: 480px) {
+  .hero-copy h1 { font-size: 1.95rem; }
+  .hero-sub { font-size: 1.05rem; }
+  .hero { padding: 3.5rem 0 4rem; }
+}
+
 .hero-sub {
   color: rgba(255,255,255,.86);
   font-size: 1.2rem;
