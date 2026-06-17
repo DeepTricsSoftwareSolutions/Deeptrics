@@ -3168,4 +3168,84 @@ textarea:focus-visible {
   .section, .home-section { padding: 3.5rem 0; }
 }
 
+/* ============================================================
+   HERO & FOOTER POLISH (depth, motion, accents)
+   ============================================================ */
+
+/* Accent the key word in the headline */
+.hero-accent {
+  background: linear-gradient(120deg, #2bd4b4, #7df0da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Sticky header reads clearly over the dark hero */
+header { box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22); }
+
+/* Staggered entrance for hero content */
+.hero-copy > * { animation: heroIn .7s cubic-bezier(.2,.7,.2,1) backwards; }
+.hero-copy > *:nth-child(1) { animation-delay: .05s; }
+.hero-copy > *:nth-child(2) { animation-delay: .12s; }
+.hero-copy > *:nth-child(3) { animation-delay: .19s; }
+.hero-copy > *:nth-child(4) { animation-delay: .26s; }
+.hero-copy > *:nth-child(5) { animation-delay: .33s; }
+.hero-visual { animation: heroIn .8s cubic-bezier(.2,.7,.2,1) .28s backwards; }
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Chart bars grow on load */
+.aw-chart span { transform-origin: bottom; animation: growBar .9s ease-out backwards; }
+.aw-chart span:nth-child(1) { animation-delay: .45s; }
+.aw-chart span:nth-child(2) { animation-delay: .55s; }
+.aw-chart span:nth-child(3) { animation-delay: .65s; }
+.aw-chart span:nth-child(4) { animation-delay: .75s; }
+.aw-chart span:nth-child(5) { animation-delay: .85s; }
+.aw-chart span:nth-child(6) { animation-delay: .95s; }
+@keyframes growBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+
+/* Floating UI cards for depth around the app window */
+.float-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: .7rem .85rem;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.38);
+  z-index: 3;
+}
+.float-card .fc-icon {
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .9rem;
+  background: rgba(26, 188, 156, 0.16);
+  color: var(--accent-ink);
+}
+.float-card .fc-icon.alt { background: rgba(45, 108, 192, 0.16); color: #2d6cc0; }
+.float-card .fc-lines { display: flex; flex-direction: column; gap: 5px; }
+.float-card .fc-lines span { display: block; height: 6px; border-radius: 3px; background: #e2e8f0; }
+.float-card .fc-lines span:first-child { width: 56px; }
+.float-card .fc-lines span:last-child { width: 34px; }
+.fc-a { top: 4%; right: -7%; animation: floatY 5s ease-in-out infinite; }
+.fc-b { bottom: 6%; left: -8%; animation: floatY 6.5s ease-in-out infinite reverse; }
+@keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@media (max-width: 900px) { .float-card { display: none; } }
+
+/* Footer accent + link polish */
+.site-footer { position: relative; }
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), #2d6cc0 55%, transparent);
+}
+.footer-col a { transition: color .2s ease, transform .2s ease; }
+.footer-col a:hover { color: #fff; transform: translateX(3px); }
+
 
