@@ -108,6 +108,38 @@ describe('Apply form handler (initApplicationForm)', () => {
     expect(statusEl.textContent).toBe('Something went wrong. Please try again.');
     expect(submitBtn.disabled).toBe(false);
   });
+
+  it('honeypot: drops bot submissions without calling fetch', async () => {
+    const html = `
+      <!DOCTYPE html>
+      <html><body>
+        <div id="applyStatus"></div>
+        <form id="globalApplicationForm">
+          <input class="hp" name="website" value="http://spam.example">
+          <input name="firstName" value="J"><input name="lastName" value="Doe">
+          <input name="email" value="j@test.com">
+          <button type="submit">Submit</button>
+        </form>
+      </body></html>
+    `;
+    const dom = new JSDOM(html, { runScripts: 'dangerously', url: 'http://localhost' });
+    const window = dom.window;
+    const document = window.document;
+    const form = document.getElementById('globalApplicationForm');
+    const statusEl = document.getElementById('applyStatus');
+
+    const fetchMock = jest.fn();
+    window.fetch = fetchMock;
+    window.buildApplicationPayload = (fd) => new window.URLSearchParams({ test: '1' });
+
+    window.eval(fs.readFileSync(path.join(__dirname, '../assets/js/main.js'), 'utf8'));
+
+    form.dispatchEvent(new window.Event('submit', { bubbles: true, cancelable: true }));
+    await new Promise((r) => setTimeout(r, 30));
+
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(statusEl.textContent).toBe('Application submitted successfully!');
+  });
 });
 
 describe('toggleMenu', () => {

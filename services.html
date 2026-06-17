@@ -3,88 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="DeepTrics software development services: web, mobile, AI & machine learning, cloud & DevOps, UI/UX design, and custom product engineering.">
   <link rel="icon" href="assets/images/logo/DeepTrics.png" type="image/png">
-  <meta name="description" content="DeepTrics software development services: web apps, mobile apps, and AI solutions. Our commercial work funds free student internships.">
-  <title>Services - DeepTrics | Web, Mobile & AI Development</title>
+  <title>Services - DeepTrics | Web, Mobile, AI, Cloud & Custom Software</title>
+
+  <!-- Social / SEO -->
+  <link rel="canonical" href="https://www.deeptrics.com/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DeepTrics">
+  <meta property="og:title" content="Services - DeepTrics">
+  <meta property="og:description" content="Web, mobile, AI, cloud, UI/UX, and custom software development.">
+  <meta property="og:url" content="https://www.deeptrics.com/services.html">
+  <meta property="og:image" content="https://www.deeptrics.com/assets/images/logo/DeepTrics.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Services - DeepTrics">
+  <meta name="twitter:description" content="Web, mobile, AI, cloud, UI/UX, and custom software development.">
+  <meta name="twitter:image" content="https://www.deeptrics.com/assets/images/logo/DeepTrics.png">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
-          </a>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
+        </a>
+      </div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="burger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="toggleMenu(this)">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+  <!-- HERO -->
+  <section class="internship-hero section visible">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="internship-hero-title">Software, built end to end</h1>
+        <p class="hero-subtitle">From the first wireframe to a product running in production, we handle the whole journey — across web, mobile, AI, and the cloud.</p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+          <a href="#services-grid" class="btn btn-secondary">Browse Services</a>
         </div>
-        <nav>
-            <ul id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="internships.html">Internships</a></li>
-                <li><a href="college-partnership.html">Colleges & Universities</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="burger" onclick="toggleMenu()">
-              <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </div>
-</header>
-
-  <!-- Hero / Intro -->
-  <section id="services-hero" class="section home-section visible">
-    <div class="container">
-      <h3>Our Services</h3>
-      <p class="section-lead">We build software for products and clients. This work funds our free internship and fellowship programs—so when you work with us, you also support student learning.</p>
-    </div>
-  </section>
-
-  <!-- Service areas -->
-  <section id="services" class="section home-section home-section-alt">
-    <div class="container">
-      <h3>What We Build</h3>
-      <p class="section-lead">Web, mobile, and AI solutions tailored to your needs. We use modern stacks and focus on clean, maintainable delivery.</p>
-      <div class="cards">
-        <a href="web-development.html">
-          <div class="card" id="web-dev">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
-            <h4>Web Development</h4>
-            <p>Responsive websites and web applications with React, Django, Node.js. From front-end to full stack.</p>
-          </div>
-        </a>
-        <a href="mobile-app.html">
-          <div class="card" id="mobile-dev">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" title="React Native" />
-            <h4>Mobile Apps</h4>
-            <p>Native and cross-platform mobile apps with Flutter, Kotlin, and React Native.</p>
-          </div>
-        </a>
-        <a href="ai-solutions.html">
-          <div class="card" id="ai-solutions">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" title="PyTorch" />
-            <h4>AI & ML Solutions</h4>
-            <p>AI and machine learning for automation, prediction, and smarter workflows. Python, TensorFlow, PyTorch.</p>
-          </div>
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section home-section">
+  <!-- SERVICES GRID -->
+  <section id="services-grid" class="section home-section visible">
     <div class="container">
-      <p class="section-lead">Interested in working with us? <a href="contact.html">Get in touch</a>. For free student internships, see <a href="internships.html">Internships</a> and <a href="apply.html">Apply</a>.</p>
+      <span class="section-eyebrow">What We Do</span>
+      <h3>Our Services</h3>
+      <p class="section-lead">Six core capabilities that cover everything most products need — used individually or together.</p>
+      <div class="programs-grid">
+
+        <div class="program-card" id="web-development">
+          <div class="program-header">
+            <div class="program-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+            <h4>Web Development</h4>
+          </div>
+          <p>Fast, responsive websites and full-blown web applications — from marketing sites to complex, data-driven platforms and dashboards.</p>
+          <ul class="program-skills">
+            <li><i class="fas fa-check" aria-hidden="true"></i> Front-end &amp; full-stack builds</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> APIs &amp; integrations</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Performance &amp; SEO-friendly</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="role-tag">React</span>
+            <span class="role-tag">Node.js</span>
+            <span class="role-tag">Django</span>
+          </div>
+          <a href="web-development.html" class="card-link">Full guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="program-card" id="mobile">
+          <div class="program-header">
+            <div class="program-icon"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i></div>
+            <h4>Mobile App Development</h4>
+          </div>
+          <p>Native and cross-platform mobile apps that feel fast and look great on every device — built for real-world use.</p>
+          <ul class="program-skills">
+            <li><i class="fas fa-check" aria-hidden="true"></i> iOS &amp; Android</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Cross-platform with one codebase</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Offline-first where it matters</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="role-tag">Flutter</span>
+            <span class="role-tag">React Native</span>
+            <span class="role-tag">Kotlin</span>
+          </div>
+          <a href="Mobile-app.html" class="card-link">Full guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="program-card" id="ai">
+          <div class="program-header">
+            <div class="program-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+            <h4>AI &amp; Machine Learning</h4>
+          </div>
+          <p>Practical AI that ships — automation, prediction, search, and intelligent features built into real products, not demos.</p>
+          <ul class="program-skills">
+            <li><i class="fas fa-check" aria-hidden="true"></i> LLM &amp; chatbot integrations</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Prediction &amp; classification</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Workflow automation</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="role-tag">Python</span>
+            <span class="role-tag">TensorFlow</span>
+            <span class="role-tag">PyTorch</span>
+          </div>
+          <a href="AI-solutions.html" class="card-link">Full guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="program-card" id="cloud">
+          <div class="program-header">
+            <div class="program-icon"><i class="fas fa-cloud" aria-hidden="true"></i></div>
+            <h4>Cloud &amp; DevOps</h4>
+          </div>
+          <p>Reliable infrastructure and automated delivery — so your product scales smoothly and deploys without drama.</p>
+          <ul class="program-skills">
+            <li><i class="fas fa-check" aria-hidden="true"></i> CI/CD pipelines</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Containers &amp; orchestration</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Cloud setup &amp; monitoring</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="role-tag">AWS</span>
+            <span class="role-tag">Docker</span>
+            <span class="role-tag">CI/CD</span>
+          </div>
+          <a href="contact.html" class="card-link">Discuss your project <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="program-card" id="design">
+          <div class="program-header">
+            <div class="program-icon"><i class="fas fa-pen-ruler" aria-hidden="true"></i></div>
+            <h4>UI/UX Design</h4>
+          </div>
+          <p>Research-led design and prototypes that turn complex problems into interfaces people actually enjoy using.</p>
+          <ul class="program-skills">
+            <li><i class="fas fa-check" aria-hidden="true"></i> User research &amp; flows</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Wireframes &amp; prototypes</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Design systems</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="role-tag">Figma</span>
+            <span class="role-tag">Prototyping</span>
+            <span class="role-tag">Design systems</span>
+          </div>
+          <a href="contact.html" class="card-link">Discuss your project <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="program-card" id="custom">
+          <div class="program-header">
+            <div class="program-icon"><i class="fas fa-gears" aria-hidden="true"></i></div>
+            <h4>Custom Software &amp; Product Engineering</h4>
+          </div>
+          <p>Bespoke software, internal tools, and end-to-end product engineering tailored to exactly how your business works.</p>
+          <ul class="program-skills">
+            <li><i class="fas fa-check" aria-hidden="true"></i> MVP to scale</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Internal &amp; admin tools</li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> Legacy modernization</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="role-tag">Architecture</span>
+            <span class="role-tag">Integrations</span>
+            <span class="role-tag">Scalability</span>
+          </div>
+          <a href="contact.html" class="card-link">Discuss your project <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+      </div>
     </div>
   </section>
+
+  <!-- PROCESS -->
+  <section class="section home-section home-section-alt visible">
+    <div class="container">
+      <span class="section-eyebrow">How We Work</span>
+      <h3>A process that keeps you in the loop</h3>
+      <p class="section-lead">No black boxes. You see progress in short cycles and help steer the direction throughout.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Discover</h4>
+          <p>We learn your goals and constraints, then scope the work clearly and realistically.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Design</h4>
+          <p>Wireframes, prototypes, and architecture — agreed before we build.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Build</h4>
+          <p>Short iterations with regular demos, so you can adjust early and often.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h4>Launch &amp; support</h4>
+          <p>We ship, monitor, and keep improving as your product grows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <h3>Not sure which service you need?</h3>
+      <p>Tell us about your project and we'll recommend the right approach — no obligation.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Get in Touch</a>
+      </div>
+    </div>
+  </section>
+  </main>
 
   <footer>
     <div class="container">
@@ -94,32 +241,26 @@
         </a>
         <nav class="footer-nav">
           <a href="index.html">Home</a>
-          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
           <a href="services.html">Services</a>
           <a href="internships.html">Internships</a>
           <a href="careers.html">Careers</a>
+          <a href="college-partnership.html">Colleges</a>
         </nav>
         <a href="contact.html" class="footer-contact-btn">Contact</a>
       </div>
       <div class="footer-social-row">
-        <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/deeptrics_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/DeepTrics" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/deeptrics_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://x.com/DeepTrics" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copyright">© Copyright 2025 Deeptrics. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Legal</a>
-          <a href="#">Terms of Service</a>
-        </div>
+        <p class="footer-copyright">© <span class="footer-year">2026</span> DeepTrics. All rights reserved.</p>
       </div>
     </div>
   </footer>
-  
-  
+
   <script src="assets/js/main.js"></script>
-  
-  
 </body>
 </html>

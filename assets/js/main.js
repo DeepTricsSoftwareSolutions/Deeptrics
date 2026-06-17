@@ -1,11 +1,12 @@
 // Shared JavaScript for DeepTrics website
 
-// Toggle mobile menu
-function toggleMenu() {
+// Toggle mobile menu (keeps aria-expanded in sync for screen readers)
+function toggleMenu(btn) {
   const navLinks = document.getElementById('nav-links');
-  if (navLinks) {
-    navLinks.classList.toggle('show');
-  }
+  if (!navLinks) return;
+  const isOpen = navLinks.classList.toggle('show');
+  const burger = btn || document.querySelector('.burger');
+  if (burger) burger.setAttribute('aria-expanded', String(isOpen));
 }
 
 // Close mobile menu when clicking outside
@@ -13,10 +14,11 @@ document.addEventListener('click', function(event) {
   const nav = document.querySelector('nav');
   const burger = document.querySelector('.burger');
   const navLinks = document.getElementById('nav-links');
-  
+
   if (navLinks && navLinks.classList.contains('show')) {
-    if (!nav.contains(event.target) && event.target !== burger) {
+    if (nav && !nav.contains(event.target)) {
       navLinks.classList.remove('show');
+      if (burger) burger.setAttribute('aria-expanded', 'false');
     }
   }
 });
@@ -92,17 +94,29 @@ const initContactForm = () => {
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
+    // Honeypot: real users never see/fill this. If filled, it's a bot —
+    // pretend success and drop it silently.
+    const honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value.trim() !== '') {
+      setStatus('Message sent successfully! We\'ll get back to you soon.', 'success');
+      form.reset();
+      return;
+    }
+
     if (spinner) {
       spinner.classList.remove('hidden');
       spinner.classList.add('show');
       document.body.style.overflow = 'hidden';
     }
     setStatus('', '');
-    
+
     const formData = new FormData(form);
     const data = new URLSearchParams(formData);
+    data.delete('website'); // never forward the honeypot to the sheet
 
+    // NOTE: 'no-cors' returns an opaque response, so .then() runs even if the
+    // Apps Script rejects the data. Only true network errors hit .catch().
     fetch(CONTACT_FORM_SCRIPT_URL, {
       method: 'POST',
       body: data,
@@ -114,7 +128,9 @@ const initContactForm = () => {
       if (formWrapper) formWrapper.style.display = 'none';
       if (status) {
         status.style.display = 'block';
-        status.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (typeof status.scrollIntoView === 'function') {
+          status.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
       
       if (spinner) {
@@ -157,33 +173,34 @@ const initApplicationForm = () => {
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+
+    // Honeypot: filled = bot. Pretend success and drop it.
+    const honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value.trim() !== '') {
+      setStatus('Application submitted successfully!', 'success');
+      form.reset();
+      return;
+    }
+
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
+
+    if (typeof window.buildApplicationPayload !== 'function') {
+      // The payload module must load before main.js on the page with this form.
+      setStatus('Form is not ready. Please refresh and try again.', 'error');
+      return;
+    }
+
     setStatus('Submitting...', null);
     if (submitBtn) submitBtn.disabled = true;
 
     const formData = new FormData(form);
-    const payload = (typeof window.buildApplicationPayload === 'function')
-      ? window.buildApplicationPayload(formData)
-      : (function() {
-          const g = (k) => formData.get(k) || '';
-          const p = new URLSearchParams();
-          p.append('Timestamp', new Date().toISOString());
-          p.append('firstName', g('firstName')); p.append('middleName', g('middleName')); p.append('lastName', g('lastName'));
-          p.append('email', g('email')); p.append('country', g('country')); p.append('timezone', g('timezone'));
-          p.append('phone', g('phone')); p.append('institution', g('institution')); p.append('degree', g('degree'));
-          p.append('currentStatus', g('currentStatus')); p.append('programType', g('programType'));
-          p.append('preferredRole', g('preferredRole')); p.append('whyInterested', g('whyInterested'));
-          p.append('hasProjects', g('hasProjects')); p.append('portfolioLink', g('portfolioLink'));
-          p.append('hopeToLearn', g('hopeToLearn')); p.append('weeklyHours', g('weeklyHours'));
-          p.append('workingMode', g('workingMode')); p.append('comfortableTimezones', g('comfortableTimezones'));
-          p.append('expectFreeRealWork', g('expectFreeRealWork')); p.append('expectNotCertificateOnly', g('expectNotCertificateOnly'));
-          p.append('expectCollaborate', g('expectCollaborate')); p.append('expectCommitTime', g('expectCommitTime'));
-          return p;
-        })();
+    const payload = window.buildApplicationPayload(formData);
 
+    // NOTE: 'no-cors' returns an opaque response, so .then() runs even if the
+    // Apps Script rejects the data. Only true network errors hit .catch().
     fetch('https://script.google.com/macros/s/AKfycbwxpPJfAd9U0y1BohJOv-gDBfbCSmUb1Cp0I0byj5tTFhaYoxThKkRjNGd3IrCiIc-x/exec', {
       method: 'POST',
       body: payload,
@@ -195,7 +212,9 @@ const initApplicationForm = () => {
       if (formWrapper) formWrapper.style.display = 'none';
       if (status) {
         status.style.display = 'block';
-        status.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (typeof status.scrollIntoView === 'function') {
+          status.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     })
     .catch(() => {
@@ -244,3 +263,12 @@ const setActiveNavLink = () => {
 
 // Set active nav link on page load
 window.addEventListener('load', setActiveNavLink);
+
+// Keep footer copyright year current automatically
+const setFooterYear = () => {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('.footer-year').forEach(el => {
+    el.textContent = year;
+  });
+};
+setFooterYear();

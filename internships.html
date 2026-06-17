@@ -3,53 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Free internships at DeepTrics. Work on real software projects with our teams — no fees, no fake tasks. Apply on this page.">
   <link rel="icon" href="assets/images/logo/DeepTrics.png" type="image/png">
-  <meta name="description" content="Free internships at DeepTrics. Real software projects, real experience. No fees. No fake internships. For students who want to learn by building.">
-  <title>Internships - DeepTrics | Free Internships. Real Work.</title>
+  <title>Internships - DeepTrics | Free Internships, Real Work</title>
+
+  <!-- Social / SEO -->
+  <link rel="canonical" href="https://www.deeptrics.com/internships.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DeepTrics">
+  <meta property="og:title" content="Internships - DeepTrics">
+  <meta property="og:description" content="Free internships on real software projects. No fees, no fake tasks. Apply today.">
+  <meta property="og:url" content="https://www.deeptrics.com/internships.html">
+  <meta property="og:image" content="https://www.deeptrics.com/assets/images/logo/DeepTrics.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Internships - DeepTrics">
+  <meta name="twitter:description" content="Free internships on real software projects. No fees, no fake tasks. Apply today.">
+  <meta name="twitter:image" content="https://www.deeptrics.com/assets/images/logo/DeepTrics.png">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
-          </a>
-        </div>
-        <nav>
-            <ul id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="internships.html" class="active">Internships</a></li>
-                <li><a href="college-partnership.html">Colleges & Universities</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="burger" onclick="toggleMenu()">
-              <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
+        </a>
+      </div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="internships.html">Internships</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="burger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links" onclick="toggleMenu(this)">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </nav>
     </div>
   </header>
 
-  <!-- 1. HERO SECTION -->
+  <main id="main">
+  <!-- HERO -->
   <section id="internship-hero" class="internship-hero section visible">
     <div class="container">
       <div class="hero-content">
         <h1 class="internship-hero-title">Learn. Build. Evolve.</h1>
-        <p class="hero-subtitle">Gain real-world experience by working on real software projects with global teams — completely free.</p>
-        <p class="internship-hero-support">DeepTrics internships focus on real contribution, industry tools, and collaborative product development — not dummy tasks.</p>
+        <p class="hero-subtitle">Work on real software projects alongside our teams and gain genuine experience — completely free.</p>
+        <p class="internship-hero-support">As a software company, we run our internships on real products and client work — real contribution and industry tools, not dummy tasks.</p>
         <div class="hero-buttons">
-          <a href="apply.html" class="btn btn-primary">Apply Now</a>
-          <a href="#how-it-works" class="btn btn-secondary">How This Internship Works</a>
+          <a href="#apply" class="btn btn-primary">Apply Now</a>
+          <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. WHO THIS INTERNSHIP IS FOR -->
+  <!-- WHO THIS IS FOR -->
   <section id="who-this-for" class="section home-section">
     <div class="container">
       <h3>Who This Internship Is For</h3>
@@ -75,7 +91,7 @@
     </div>
   </section>
 
-  <!-- 3. HOW THE INTERNSHIP WORKS -->
+  <!-- HOW IT WORKS -->
   <section id="how-it-works" class="section home-section home-section-alt">
     <div class="container">
       <h3>How The Internship Works</h3>
@@ -84,7 +100,7 @@
         <div class="step-card">
           <div class="step-number">1</div>
           <h4>Apply online</h4>
-          <p>Fill out the application form. No fees, no hidden steps.</p>
+          <p>Fill out the application form on this page. No fees, no hidden steps.</p>
         </div>
         <div class="step-card">
           <div class="step-number">2</div>
@@ -110,106 +126,415 @@
     </div>
   </section>
 
-  <!-- 4. INTERNSHIP ROLES (Overview) -->
+  <!-- INTERNSHIP ROLES -->
   <section id="roles" class="section home-section">
     <div class="container">
       <h3>Internship Roles</h3>
-      <p class="section-lead">Find your path. Each role works on real projects—what you practice depends on the team and project.</p>
+      <p class="section-lead">Find your path. Each role works on real projects — what you practice depends on the team and project.</p>
       <div class="roles-overview-grid">
         <div class="role-card">
-          <div class="role-card-icon"><i class="fas fa-code"></i></div>
+          <div class="role-card-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
           <h4>Frontend Developer</h4>
           <p>Build and improve user-facing interfaces.</p>
-          <span class="role-practice">You’ll practice: UI implementation, responsive layout, basic tooling.</span>
+          <span class="role-practice">You'll practice: UI implementation, responsive layout, basic tooling.</span>
         </div>
         <div class="role-card">
-          <div class="role-card-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="role-card-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
           <h4>Full Stack Developer</h4>
           <p>Work on both front-end and back-end of a product.</p>
-          <span class="role-practice">You’ll practice: APIs, databases, end-to-end features.</span>
+          <span class="role-practice">You'll practice: APIs, databases, end-to-end features.</span>
         </div>
         <div class="role-card">
-          <div class="role-card-icon"><i class="fas fa-palette"></i></div>
+          <div class="role-card-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
           <h4>UI/UX Designer</h4>
           <p>Design flows, screens, and prototypes for real products.</p>
-          <span class="role-practice">You’ll practice: wireframing, prototyping, user-focused thinking.</span>
+          <span class="role-practice">You'll practice: wireframing, prototyping, user-focused thinking.</span>
         </div>
         <div class="role-card">
-          <div class="role-card-icon"><i class="fas fa-server"></i></div>
+          <div class="role-card-icon"><i class="fas fa-server" aria-hidden="true"></i></div>
           <h4>Backend Developer</h4>
           <p>Work on servers, APIs, and data that power applications.</p>
-          <span class="role-practice">You’ll practice: APIs, databases, logic and structure.</span>
+          <span class="role-practice">You'll practice: APIs, databases, logic and structure.</span>
         </div>
         <div class="role-card">
-          <div class="role-card-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="role-card-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
           <h4>Data Analyst / Engineer</h4>
           <p>Clean, analyze, and help use data for real decisions.</p>
-          <span class="role-practice">You’ll practice: SQL, spreadsheets, simple visualizations.</span>
+          <span class="role-practice">You'll practice: SQL, spreadsheets, simple visualizations.</span>
         </div>
         <div class="role-card">
-          <div class="role-card-icon"><i class="fas fa-cloud"></i></div>
+          <div class="role-card-icon"><i class="fas fa-cloud" aria-hidden="true"></i></div>
           <h4>DevOps / Cloud</h4>
           <p>Help with deployment, automation, and running systems.</p>
-          <span class="role-practice">You’ll practice: CI/CD, containers, basic cloud usage.</span>
+          <span class="role-practice">You'll practice: CI/CD, containers, basic cloud usage.</span>
         </div>
         <div class="role-card">
-          <div class="role-card-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="role-card-icon"><i class="fas fa-mobile-alt" aria-hidden="true"></i></div>
           <h4>Mobile Developer</h4>
           <p>Build or improve mobile apps for real users.</p>
-          <span class="role-practice">You’ll practice: mobile UI, platform basics, cross-platform or native.</span>
+          <span class="role-practice">You'll practice: mobile UI, platform basics, cross-platform or native.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. WHAT YOU WILL ACTUALLY DO -->
+  <!-- WHAT YOU WILL DO -->
   <section id="what-you-do" class="section home-section home-section-alt">
     <div class="container">
       <h3>What You Will Actually Do</h3>
-      <p class="section-lead">This is how we’re different from certificate-only programs.</p>
+      <p class="section-lead">This is how we're different from certificate-only programs.</p>
       <ul class="gains-list do-list">
-        <li><i class="fas fa-check-circle"></i> Work on real features, not demo tasks.</li>
-        <li><i class="fas fa-check-circle"></i> Use Git, issue tracking, and team workflows.</li>
-        <li><i class="fas fa-check-circle"></i> Attend real stand-ups and reviews.</li>
-        <li><i class="fas fa-check-circle"></i> Learn how products are actually built and shipped.</li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Work on real features, not demo tasks.</li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Use Git, issue tracking, and team workflows.</li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Attend real stand-ups and reviews.</li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Learn how products are actually built and shipped.</li>
       </ul>
     </div>
   </section>
 
-  <!-- 6. DURATION & COMMITMENT -->
+  <!-- DURATION & COMMITMENT -->
   <section id="duration" class="section home-section">
     <div class="container">
-      <h3>Duration & Commitment</h3>
-      <p class="section-lead">We’re upfront so you can decide if this fits your schedule.</p>
+      <h3>Duration &amp; Commitment</h3>
+      <p class="section-lead">We're upfront so you can decide if this fits your schedule.</p>
       <ul class="duration-list">
         <li><strong>Duration:</strong> Typically 8–12 weeks, with some flexibility based on project and your availability.</li>
-        <li><strong>Time commitment:</strong> A few hours to a part-time commitment per week—we’ll align with you during onboarding.</li>
+        <li><strong>Time commitment:</strong> A few hours to a part-time commitment per week — we'll align with you during onboarding.</li>
         <li><strong>Remote / hybrid:</strong> Most work is remote; some teams may have optional sync sessions.</li>
-        <li><strong>Final-year students:</strong> Depending on project and contribution, there may be opportunities to earn while working on real project work. We don’t promise this—we mention it so you know it’s a possibility.</li>
+        <li><strong>Final-year students:</strong> Depending on project and contribution, there may be opportunities to earn while working on real project work. We don't promise this — we mention it so you know it's a possibility.</li>
       </ul>
     </div>
   </section>
 
-  <!-- 7. WHY THIS IS FREE -->
+  <!-- WHY FREE -->
   <section id="why-free" class="section home-section home-section-alt">
     <div class="container">
       <h3>Why This Is Free</h3>
-      <p>DeepTrics funds internships through product development and client work. Students never pay fees. Ever.</p>
+      <p>DeepTrics funds internships through our product development and client work. Students never pay fees. Ever.</p>
     </div>
   </section>
 
-  <!-- 8. APPLICATION PROCESS -->
+  <!-- APPLICATION PROCESS -->
   <section id="application-process" class="section home-section">
     <div class="container">
       <h3>Application Process</h3>
-      <p class="section-lead">What happens after you apply—no surprises.</p>
+      <p class="section-lead">What happens after you apply — no surprises.</p>
       <ul class="process-list">
         <li>We review your application and get back to you within a few days to a couple of weeks.</li>
         <li>Short screening may include a brief conversation to understand your goals and availability.</li>
-        <li>We care more about attitude and willingness to learn than prior experience. If you’re serious about building real skills, say so in your application.</li>
+        <li>We care more about attitude and willingness to learn than prior experience. If you're serious about building real skills, say so in your application.</li>
       </ul>
     </div>
   </section>
+
+  <!-- COLLEGE PARTNERSHIP TEASER -->
+  <section id="college-teaser" class="section home-section home-section-alt">
+    <div class="container">
+      <h3>From a College or University?</h3>
+      <p class="section-lead">We partner with institutions to give students real-world experience — at no cost to you or your students.</p>
+      <div class="section-cta">
+        <a href="college-partnership.html" class="btn btn-secondary">Partner With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMBEDDED APPLY FORM -->
+  <section id="apply" class="apply-page apply-embed">
+    <div class="apply-main">
+      <div class="container">
+        <div class="apply-header">
+          <h2>Apply for an Internship or Fellowship</h2>
+          <p class="apply-header-sub">One form. Worldwide. No fees.</p>
+        </div>
+
+        <div id="applyStatus" class="form-status" aria-live="polite"></div>
+
+        <div id="applyFormWrapper">
+          <div class="apply-intro" role="region" aria-labelledby="intro-heading">
+            <h3 id="intro-heading" class="apply-intro-title">Before you start</h3>
+            <p>This application is open to students worldwide.</p>
+            <p>DeepTrics offers free, real-world internships and fellowship programs. There are no fees. We value curiosity, responsibility, and willingness to learn more than prior experience.</p>
+          </div>
+
+          <form id="globalApplicationForm" class="apply-form" action="#" method="post">
+
+            <!-- Honeypot: hidden from people, attractive to bots. Leave empty. -->
+            <div class="hp-field" aria-hidden="true">
+              <label>Leave this field empty
+                <input type="text" name="website" tabindex="-1" autocomplete="off">
+              </label>
+            </div>
+
+            <fieldset class="form-section">
+              <legend><span class="legend-num">1</span> Basic Information</legend>
+
+              <div class="name-row form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="required">*</span></label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Given name" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label for="middleName">Middle Name <span class="optional">(optional)</span></label>
+                  <input type="text" id="middleName" name="middleName" placeholder="Middle name if any" autocomplete="additional-name">
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span class="required">*</span></label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Family name / Surname" required autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="country">Country of Residence <span class="required">*</span></label>
+                <select id="country" name="country" required aria-describedby="country-helper">
+                  <option value="">Select country</option>
+                  <option value="AF">Afghanistan</option>
+                  <option value="AL">Albania</option>
+                  <option value="DZ">Algeria</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AU">Australia</option>
+                  <option value="AT">Austria</option>
+                  <option value="BD">Bangladesh</option>
+                  <option value="BE">Belgium</option>
+                  <option value="BR">Brazil</option>
+                  <option value="CA">Canada</option>
+                  <option value="CN">China</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                  <option value="IN">India</option>
+                  <option value="IE">Ireland</option>
+                  <option value="IT">Italy</option>
+                  <option value="JP">Japan</option>
+                  <option value="MY">Malaysia</option>
+                  <option value="MX">Mexico</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="PK">Pakistan</option>
+                  <option value="PH">Philippines</option>
+                  <option value="SG">Singapore</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="KR">South Korea</option>
+                  <option value="ES">Spain</option>
+                  <option value="LK">Sri Lanka</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="US">United States</option>
+                  <option value="OTHER">Other</option>
+                </select>
+                <span id="country-helper" class="helper-text">Where you currently live</span>
+              </div>
+
+              <div class="form-group">
+                <label for="timezone">Time Zone <span class="required">*</span></label>
+                <select id="timezone" name="timezone" required aria-describedby="timezone-helper">
+                  <option value="">Select time zone</option>
+                  <optgroup label="Americas">
+                    <option value="UTC-8">UTC-8 (Pacific – PST/PDT)</option>
+                    <option value="UTC-7">UTC-7 (Mountain – MST/MDT)</option>
+                    <option value="UTC-6">UTC-6 (Central – CST/CDT)</option>
+                    <option value="UTC-5">UTC-5 (Eastern – EST/EDT)</option>
+                    <option value="UTC-4">UTC-4 (Atlantic)</option>
+                    <option value="UTC-3">UTC-3 (Brazil, Argentina)</option>
+                  </optgroup>
+                  <optgroup label="Europe &amp; Africa">
+                    <option value="UTC+0">UTC+0 (UK, GMT)</option>
+                    <option value="UTC+1">UTC+1 (Central Europe – CET)</option>
+                    <option value="UTC+2">UTC+2 (Eastern Europe, South Africa)</option>
+                    <option value="UTC+3">UTC+3 (Moscow, East Africa)</option>
+                  </optgroup>
+                  <optgroup label="Asia &amp; Oceania">
+                    <option value="UTC+4">UTC+4 (Dubai, Gulf)</option>
+                    <option value="UTC+5:30">UTC+5:30 (India – IST)</option>
+                    <option value="UTC+7">UTC+7 (Thailand, Vietnam)</option>
+                    <option value="UTC+8">UTC+8 (Singapore, China, Perth)</option>
+                    <option value="UTC+9">UTC+9 (Japan, Korea)</option>
+                    <option value="UTC+10">UTC+10 (Australia East)</option>
+                  </optgroup>
+                  <option value="OTHER_TZ">Other</option>
+                </select>
+                <span id="timezone-helper" class="helper-text">Used for scheduling</span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp <span class="optional">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +1 234 567 8900" autocomplete="tel">
+              </div>
+
+              <div class="form-group">
+                <label for="institution">College / University / Institution <span class="required">*</span></label>
+                <input type="text" id="institution" name="institution" placeholder="Name of your institution" required>
+              </div>
+
+              <div class="form-group">
+                <label for="degree">Degree / Program <span class="required">*</span></label>
+                <input type="text" id="degree" name="degree" placeholder="e.g. Computer Science, B.Tech" required>
+              </div>
+
+              <div class="form-group">
+                <label for="currentStatus">Current Year or Status <span class="required">*</span></label>
+                <select id="currentStatus" name="currentStatus" required>
+                  <option value="">Select</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Graduate">Graduate</option>
+                  <option value="Final Year">Final Year</option>
+                  <option value="Recent Graduate">Recent Graduate</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend><span class="legend-num">2</span> Program &amp; Role Selection</legend>
+
+              <div class="form-group">
+                <label for="programType">Program Type <span class="required">*</span></label>
+                <select id="programType" name="programType" required>
+                  <option value="">Select</option>
+                  <option value="Internship">Internship</option>
+                  <option value="Fellowship">Fellowship</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredRole">Preferred Role / Area <span class="required">*</span></label>
+                <select id="preferredRole" name="preferredRole" required>
+                  <option value="">Select</option>
+                  <option value="Frontend">Frontend</option>
+                  <option value="Full Stack">Full Stack</option>
+                  <option value="Backend">Backend</option>
+                  <option value="UI/UX">UI/UX</option>
+                  <option value="Data / Analytics">Data / Analytics</option>
+                  <option value="DevOps / Cloud">DevOps / Cloud</option>
+                  <option value="Mobile">Mobile</option>
+                  <option value="Research / Exploration">Research / Exploration</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="whyInterested">Why are you interested in this program? <span class="required">*</span></label>
+                <textarea id="whyInterested" name="whyInterested" rows="4" placeholder="A few lines about your motivation." required></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend><span class="legend-num">3</span> Experience &amp; Background <span class="optional">(optional)</span></legend>
+
+              <div class="form-group">
+                <label>Have you worked on any projects before?</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="hasProjects" value="Yes" id="hasProjectsYes">
+                    <span>Yes</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="hasProjects" value="No" id="hasProjectsNo">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="portfolioLink">GitHub / Portfolio / Project link <span class="optional">(optional)</span></label>
+                <input type="url" id="portfolioLink" name="portfolioLink" placeholder="https://github.com/yourprofile">
+              </div>
+
+              <div class="form-group">
+                <label for="hopeToLearn">What do you hope to learn or gain from this program?</label>
+                <textarea id="hopeToLearn" name="hopeToLearn" rows="3" placeholder="Skills or goals you have in mind."></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend><span class="legend-num">4</span> Availability &amp; Commitment</legend>
+
+              <div class="form-group">
+                <label for="weeklyHours">Weekly time availability <span class="required">*</span></label>
+                <select id="weeklyHours" name="weeklyHours" required>
+                  <option value="">Select</option>
+                  <option value="< 5 hours">&lt; 5 hours</option>
+                  <option value="5–10 hours">5–10 hours</option>
+                  <option value="10–20 hours">10–20 hours</option>
+                  <option value="20+ hours">20+ hours</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="workingMode">Preferred working mode <span class="required">*</span></label>
+                <select id="workingMode" name="workingMode" required>
+                  <option value="">Select</option>
+                  <option value="Remote">Remote</option>
+                  <option value="Hybrid">Hybrid (if applicable)</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Comfortable working with distributed teams across time zones? <span class="required">*</span></label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="comfortableTimezones" value="Yes" id="tzYes" required>
+                    <span>Yes</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="comfortableTimezones" value="No" id="tzNo">
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend><span class="legend-num">5</span> Expectation &amp; Ethics Check <span class="required">*</span></legend>
+              <p class="helper-text">All boxes must be checked.</p>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="expectFreeRealWork" value="yes" required>
+                  <span>I understand this is a <strong>free</strong> program with <strong>real work</strong>.</span>
+                </label>
+              </div>
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="expectNotCertificateOnly" value="yes" required>
+                  <span>I am not applying only for a certificate.</span>
+                </label>
+              </div>
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="expectCollaborate" value="yes" required>
+                  <span>I am willing to collaborate, communicate, and accept feedback.</span>
+                </label>
+              </div>
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="expectCommitTime" value="yes" required>
+                  <span>I can commit time consistently during the program.</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-section form-notes" role="note">
+              <p>We review applications thoughtfully. If selected, you will receive next steps by email.</p>
+            </div>
+
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn-primary">
+                Apply for Internship / Fellowship
+              </button>
+              <p class="submit-reassurance">No fees. Ever. For students worldwide.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
 
   <footer>
     <div class="container">
@@ -219,29 +544,27 @@
         </a>
         <nav class="footer-nav">
           <a href="index.html">Home</a>
-          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
           <a href="services.html">Services</a>
           <a href="internships.html">Internships</a>
           <a href="careers.html">Careers</a>
+          <a href="college-partnership.html">Colleges</a>
         </nav>
         <a href="contact.html" class="footer-contact-btn">Contact</a>
       </div>
       <div class="footer-social-row">
-        <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/deeptrics_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/DeepTrics" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/deeptrics_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://x.com/DeepTrics" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/deeptrics-software-solutions-523428359" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copyright">© Copyright 2025 Deeptrics. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Legal</a>
-          <a href="#">Terms of Service</a>
-        </div>
+        <p class="footer-copyright">© <span class="footer-year">2026</span> DeepTrics. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <script src="assets/js/modules/apply-form-payload.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
