@@ -28,13 +28,13 @@
   <header>
     <div class="container">
       <div class="logo">
-        <a href="index.html">
+        <a href="/">
           <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics Logo">
         </a>
       </div>
       <nav>
         <ul id="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
@@ -58,7 +58,8 @@
       <div class="row justify-content-between align-items-center">
         <div class="col-xl-6 col-lg-7">
           <div class="page__banner-content">
-            <p class="page__banner-intro">Have a project in mind? Get in touch about new software, a partnership, or a general inquiry — we respond to all messages.</p>
+            <h1 class="page__banner-title" id="contactHeading">Get in touch</h1>
+            <p class="page__banner-intro" id="contactIntro">Have a project in mind? Get in touch about new software, a partnership, or a general inquiry — we respond to all messages.</p>
             <p class="page__banner-intro">Whether you're a business interested in our <a href="services.html">services</a>, an institution exploring collaboration, or a student with a question — we're here to help.</p>
           </div>
         </div>
@@ -91,6 +92,17 @@
             <input type="email" id="contactEmail" name="email" placeholder="your.email@example.com" required autocomplete="email"/>
           </div>
           <div class="form-group">
+            <label for="contactSubject">What's this about? <span class="required">*</span></label>
+            <select id="contactSubject" name="subject" required>
+              <option value="General inquiry">General inquiry</option>
+              <option value="Request a quote">Request a quote</option>
+              <option value="Start a new project">Start a new project</option>
+              <option value="Product updates / waitlist">Product updates / waitlist</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Internship question">Internship question</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="contactMessage">Your Message <span class="required">*</span></label>
             <textarea id="contactMessage" name="body" rows="5" placeholder="How can we help?" required></textarea>
           </div>
@@ -105,10 +117,11 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo-link">
+          <a href="/" class="footer-logo-link">
             <img src="assets/images/logo/DeepTrics.png" alt="DeepTrics">
           </a>
           <p class="footer-tagline">We turn ideas into reliable, scalable software &mdash; web, mobile, AI, and cloud products that move your business forward.</p>
+          <a class="footer-cta" href="contact.html?type=project">Start a project <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           <div class="footer-social">
             <a href="https://www.facebook.com/profile.php?id=61574914719300" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
             <a href="https://www.instagram.com/deeptrics_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
@@ -134,7 +147,7 @@
           <h4>Explore</h4>
           <a href="products.html">Products</a>
           <a href="contact.html">Contact</a>
-          <a href="contact.html">Get a Quote</a>
+          <a href="contact.html?type=quote">Get a Quote</a>
         </nav>
       </div>
       <div class="footer-bottom">

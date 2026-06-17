@@ -264,6 +264,31 @@ const setActiveNavLink = () => {
 // Set active nav link on page load
 window.addEventListener('load', setActiveNavLink);
 
+// Adapt the contact page to the ?type= query param so each entry point
+// (Get a Quote, Notify Me, Start a Project, ...) feels purposeful instead of
+// dumping everyone onto an identical page. Also pre-selects the subject.
+const setContactContext = () => {
+  const form = document.getElementById('myForm');
+  if (!form) return;
+  const type = (new URLSearchParams(window.location.search).get('type') || '').toLowerCase();
+  const map = {
+    quote:       { heading: 'Request a quote',     intro: "Tell us about your project — scope, timeline, whatever you have — and we'll come back with an estimate.", subject: 'Request a quote' },
+    project:     { heading: 'Start a project',     intro: "Ready to build? Share what you have in mind and we'll figure out the best way to ship it.",                subject: 'Start a new project' },
+    notify:      { heading: 'Get product updates', intro: "Want to know when our products launch? Leave your details and we'll keep you posted.",                       subject: 'Product updates / waitlist' },
+    partnership: { heading: 'Partner with us',     intro: 'Interested in working together? Tell us about your institution or organisation.',                            subject: 'Partnership' },
+    internship:  { heading: 'Internship questions',intro: 'Have a question about our internship program? Ask away.',                                                    subject: 'Internship question' }
+  };
+  const ctx = map[type];
+  if (!ctx) return;
+  const heading = document.getElementById('contactHeading');
+  const intro = document.getElementById('contactIntro');
+  const subject = document.getElementById('contactSubject');
+  if (heading) heading.textContent = ctx.heading;
+  if (intro) intro.textContent = ctx.intro;
+  if (subject) subject.value = ctx.subject;
+};
+setContactContext();
+
 // Keep footer copyright year current automatically
 const setFooterYear = () => {
   const year = new Date().getFullYear();
