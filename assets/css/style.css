@@ -35,12 +35,8 @@
     max-width: 1200px;
     margin: auto;
   }
-  .container span{
-    font-size: 20px;
-    color: var(--primary-color);
-    display: inline-block;
-    font-weight: 500;
-  }
+  /* (removed legacy `.container span` rule — it bled 20px/navy into every
+     span-based component, e.g. badges, chips, eyebrows. Components style themselves.) */
   #points span{
     display: block;
     font-size: 18px;
@@ -2789,19 +2785,70 @@ header {
   align-items: center;
 }
 .hero-copy { text-align: left; }
-.hero-copy .hero-eyebrow {
-  color: #7df0da;
-  background: rgba(26,188,156,.12);
-  border: 1px solid rgba(26,188,156,.35);
-  padding: .35rem .85rem;
-  border-radius: var(--radius-pill);
-  margin-bottom: 1.4rem;
+/* Eyebrows — high specificity to beat the legacy `.container span { font-size:20px }`
+   rule. Clean uppercase label with a small leading rule, no pill. */
+.hero .hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #6ee7d2;
+  margin-bottom: 1.1rem;
+}
+.hero .hero-eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: currentColor;
+  opacity: .6;
+}
+.home-section .section-eyebrow,
+.section .section-eyebrow {
+  display: block;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin-bottom: .85rem;
 }
 .hero-copy h1 {
   color: #ffffff;
-  font-size: clamp(2.5rem, 1.6rem + 3.4vw, 4rem);
+  font-size: clamp(2.25rem, 1.4rem + 2.6vw, 3.4rem);
+  line-height: 1.08;
   font-weight: 800;
+  text-wrap: balance;
   margin-bottom: 1.25rem;
+}
+.section h3, .home-section h3 { text-wrap: balance; }
+
+/* Highlight band — turns a sparse centered section into an intentional callout */
+.highlight-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  background: linear-gradient(135deg, var(--soft-bg), #ffffff);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+.highlight-band .section-eyebrow { text-align: left; margin-bottom: .6rem; }
+.highlight-band h3 { text-align: left; margin: 0 0 .5rem; font-size: 1.6rem; }
+.highlight-band p { text-align: left; margin: 0; max-width: 52ch; color: var(--text-muted); }
+.highlight-band .btn { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .highlight-band { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
 }
 .hero-sub {
   color: rgba(255,255,255,.86);
