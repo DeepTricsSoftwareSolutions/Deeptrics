@@ -1,19 +1,47 @@
 /**
  * Design tokens & CSS variables
- * Used across the site for consistent branding
+ * Used across the site for consistent branding.
+ * Refreshed 2026 — refined palette, type, spacing, elevation.
  */
 
 :root {
-  --primary-color: #1F3A5F;
-  --accent-color: #1ABC9C;
-  --accent-hover: #17a089;
-  --soft-bg: #E6F0FA;
-  --text-primary: #1C1C1C;
-  --text-muted: #6B7280;
-  --border-color: #D1D5DB;
+  /* ===== Brand ===== */
+  --primary-color: #1F3A5F;   /* navy — dark sections, headings on light */
+  --primary-deep:  #122742;   /* deeper navy — hero gradient end */
+  --accent-color:  #1ABC9C;   /* teal — fills, primary buttons */
+  --accent-hover:  #15A589;   /* teal hover */
+  --accent-ink:    #0B7E6B;   /* accessible teal — text/links on white (WCAG AA) */
+
+  /* ===== Neutrals ===== */
+  --bg-color:    #ffffff;
+  --bg-subtle:   #F7F9FC;     /* very light section background */
+  --soft-bg:     #EDF3FA;     /* tinted section background */
+  --ink-900:     #0E1726;     /* near-black for headings */
+  --text-primary:#1C2430;
+  --text-muted:  #5B6675;
+  --border-color:#E4E9F0;     /* light, modern hairline */
+
+  /* ===== Feedback ===== */
   --success-color: #16A34A;
-  --error-color: #dc3545;
-  --bg-color: #ffffff;
+  --error-color:   #DC2626;
+
+  /* ===== Elevation ===== */
+  --shadow-sm: 0 1px 2px rgba(16,23,38,.06), 0 2px 6px rgba(16,23,38,.05);
+  --shadow-md: 0 10px 30px rgba(16,23,38,.09);
+  --shadow-lg: 0 28px 70px rgba(16,23,38,.16);
+  --shadow:    rgba(31,58,95,.12);   /* legacy alias */
+
+  /* ===== Shape ===== */
+  --radius:      14px;
+  --radius-lg:   22px;
+  --radius-pill: 999px;
+
+  /* ===== Layout ===== */
+  --maxw: 1200px;
+
+  /* ===== Type ===== */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* ===== Legacy aliases (kept so existing rules keep working) ===== */
   --text-dark: var(--text-primary);
-  --shadow: rgba(31, 58, 95, 0.12);
 }
