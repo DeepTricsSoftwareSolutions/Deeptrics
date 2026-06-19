@@ -246,18 +246,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Add active class to current page navigation
+// Add active class to current page navigation (folder-based clean URLs)
 const setActiveNavLink = () => {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('#nav-links a');
-  
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+  // Normalize any path to a trailing-slash form, dropping index.html
+  const norm = (p) => {
+    p = (p || '/').replace(/index\.html$/, '');
+    if (!p.endsWith('/')) p += '/';
+    return p;
+  };
+  const current = norm(window.location.pathname);
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    let linkPath;
+    try { linkPath = norm(new URL(link.href).pathname); }
+    catch (e) { linkPath = norm(link.getAttribute('href')); }
+    link.classList.toggle('active', linkPath === current);
   });
 };
 
